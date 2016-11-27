@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <!--ServletContext-->
     <context-param>
         <param-name>encoding</param-name>
         <param-value>UTF-8</param-value>
@@ -57,4 +58,41 @@
         <servlet-name>ServletDemo7</servlet-name>
         <url-pattern>/servletdemo7</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CountServlet</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.CountServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CountServlet</servlet-name>
+        <url-pattern>/countservlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReadServlet</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ReadServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReadServlet</servlet-name>
+        <url-pattern>/readservlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletReponseHeader</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletReponseHeader</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletReponseHeader</servlet-name>
+        <url-pattern>/servletreponseheader</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletRefresh</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletRefresh</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRefresh</servlet-name>
+        <url-pattern>/servletrefresh</url-pattern>
+    </servlet-mapping>
+
 </web-app>
