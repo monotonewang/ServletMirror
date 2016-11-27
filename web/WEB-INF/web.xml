@@ -3,6 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
     <servlet>
         <servlet-name>ServletDemo1</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletDemo1</servlet-class>
@@ -18,5 +22,39 @@
     <servlet-mapping>
         <servlet-name>ServletDemo2</servlet-name>
         <url-pattern>/servletdemo2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletDemo5</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletDemo5</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDemo5</servlet-name>
+        <url-pattern>/servletdemo5</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletDemo6</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletDemo6</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>root</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDemo6</servlet-name>
+        <url-pattern>/servletdemo6</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletDemo7</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletDemo7</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDemo7</servlet-name>
+        <url-pattern>/servletdemo7</url-pattern>
     </servlet-mapping>
 </web-app>
