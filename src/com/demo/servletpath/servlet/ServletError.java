@@ -10,15 +10,13 @@ import java.io.IOException;
 /**
  * Created by WangTest on 2016/11/27.
  */
-@WebServlet(name = "ServletRefresh")
-public class ServletRefresh extends HttpServlet {
+@WebServlet(name = "ServletError")
+public class ServletError extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //页面5秒跳转
-        response.setHeader("refresh", "5;url=/ServletMirror/html/path.html");
-//        response.sen
+        response.getWriter().write(" you type wrong url");
+
     }
 }

@@ -95,4 +95,41 @@
         <url-pattern>/servletrefresh</url-pattern>
     </servlet-mapping>
 
+    <!--**************************************DefaultServlet****************************-->
+    <!--<servlet>-->
+        <!--<servlet-name>ServletError</servlet-name>-->
+        <!--<servlet-class>com.demo.servletpath.servlet.ServletError</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>ServletError</servlet-name>-->
+        <!--<url-pattern>/</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--**************************************response****************************-->
+    <servlet>
+        <servlet-name>ServletLogin</servlet-name>
+        <servlet-class>com.demo.servletpath.response.ServletLogin</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLogin</servlet-name>
+        <url-pattern>/servletlogin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletNoCache</servlet-name>
+        <servlet-class>com.demo.servletpath.response.ServletNoCache</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletNoCache</servlet-name>
+        <url-pattern>/servletnocache</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletMessyCode</servlet-name>
+        <servlet-class>com.demo.servletpath.response.ServletMessyCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletMessyCode</servlet-name>
+        <url-pattern>/servletmessycode</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
