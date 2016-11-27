@@ -138,5 +138,29 @@
         <servlet-name>ServletDownLoad</servlet-name>
         <url-pattern>/servletdownload</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CheckcodeServlet</servlet-name>
+        <servlet-class>com.demo.servletpath.response.CheckcodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckcodeServlet</servlet-name>
+        <url-pattern>/checkcodeservlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletRequest1</servlet-name>
+        <servlet-class>com.demo.servletpath.request.ServletRequest1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRequest1</servlet-name>
+        <url-pattern>/servletrequest1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletRegister</servlet-name>
+        <servlet-class>com.demo.servletpath.request.ServletRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRegister</servlet-name>
+        <url-pattern>/servletregister</url-pattern>
+    </servlet-mapping>
 
 </web-app>
