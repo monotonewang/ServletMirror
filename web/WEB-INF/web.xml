@@ -130,6 +130,13 @@
         <servlet-name>ServletMessyCode</servlet-name>
         <url-pattern>/servletmessycode</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>ServletDownLoad</servlet-name>
+        <servlet-class>com.demo.servletpath.response.ServletDownLoad</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDownLoad</servlet-name>
+        <url-pattern>/servletdownload</url-pattern>
+    </servlet-mapping>
 
 </web-app>
