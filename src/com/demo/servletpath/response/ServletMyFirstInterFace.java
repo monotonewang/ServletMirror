@@ -27,7 +27,9 @@ public class ServletMyFirstInterFace extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String sql = "select FlowID flowID,Type type,IdCard idCard,ExamStudent examStudent,StudentName studentName,Location location,Gradle gradle from examstudent";
         List<Student> student = dao.getForList(Student.class, sql);
-        String str = JSONObject.toJSONString(student);
+        //截取
+        List<Student> students = student.subList(0, 3);
+        String str = JSONObject.toJSONString(students);
         response.getWriter().write(str);
     }
 }
