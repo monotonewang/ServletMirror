@@ -155,7 +155,7 @@ public class JdbcTest {
 
 
     /**
-     * 查询结果的处理
+     * 查询单个结果的处理
      */
     @Test
     public void testResultSet() {
@@ -194,7 +194,7 @@ public class JdbcTest {
      * @throws Exception
      */
     @Test
-    public void test() throws Exception {
+    public void testConnection() throws Exception {
 //		Driver driver=new Driver();
 
 

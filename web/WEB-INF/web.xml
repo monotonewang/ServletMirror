@@ -162,5 +162,13 @@
         <servlet-name>ServletRegister</servlet-name>
         <url-pattern>/servletregister</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletMyFirstInterFace</servlet-name>
+        <servlet-class>com.demo.servletpath.response.ServletMyFirstInterFace</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletMyFirstInterFace</servlet-name>
+        <url-pattern>/servletmyfirstinterface</url-pattern>
+    </servlet-mapping>
 
 </web-app>

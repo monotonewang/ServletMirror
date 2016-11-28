@@ -1,5 +1,6 @@
 package com.demo.jdbc.dao;
 
+import com.demo.jdbc.bean.Student;
 import com.demo.jdbc.bean.User;
 import org.junit.Test;
 
@@ -27,9 +28,9 @@ public class DaoTest {
 	
 	@Test
 	public void testGetForList(){
-		String sql="select Id id,Name name,Password password,Email email,Brith brith from user";
-		List<User> users=dao.getForList(User.class, sql);
-		System.out.println(users);
+		String sql="select FlowID flowID,Type type,IdCard idCard,ExamStudent examStudent,StudentName studentName,Location location,Gradle gradle from examstudent";
+		List<Student> students=dao.getForList(Student.class, sql);
+		System.out.println(students);
 	}
 
 	/**

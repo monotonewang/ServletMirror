@@ -1,12 +1,7 @@
 package com.demo.servletpath.servlet;
 
+import javax.servlet.*;
 import java.io.IOException;
-
-import javax.servlet.Servlet;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 
 /**
  * 生命周期
@@ -44,10 +39,7 @@ public class ServletDemo2 implements Servlet {
 	public void destroy() {
 		System.out.println("destroy...");
 	}
-	
-	
-	
-	
+
 	public ServletConfig getServletConfig() {
 		return null;
 	}
