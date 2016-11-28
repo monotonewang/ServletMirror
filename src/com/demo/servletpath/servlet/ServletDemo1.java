@@ -20,6 +20,7 @@ public class ServletDemo1 implements Servlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         servletResponse.getWriter().write("hello demo1....");
+
     }
 
     @Override

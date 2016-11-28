@@ -28,5 +28,12 @@ public class ServletDemo7 extends HttpServlet {
             String value = servletContext.getInitParameter(name);
             response.getWriter().write("name=" + name + "\n" + "value=" + value);
         }
+
+        String realPath = servletContext.getRealPath("/WEB_INF/classes/com/demo/jdbc/pro/jdbc.properties");
+        if (realPath == null) {
+            realPath = "null";
+
+        }
+        response.getWriter().write(realPath);
     }
 }
