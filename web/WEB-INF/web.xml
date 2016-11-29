@@ -170,5 +170,13 @@
         <servlet-name>ServletMyFirstInterFace</servlet-name>
         <url-pattern>/servletmyfirstinterface</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletLast</servlet-name>
+        <servlet-class>com.demo.servletpath.cookie.ServletLast</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLast</servlet-name>
+        <url-pattern>/servletlast</url-pattern>
+    </servlet-mapping>
 
 </web-app>
