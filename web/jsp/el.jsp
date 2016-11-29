@@ -24,5 +24,44 @@
 
     }
 %>
+
+<table border="1" width="60%">
+
+    <%
+        for(int i=1;i<=10;i++){
+
+    %>
+    <tr>
+        <%
+            for(int j=1;j<=10;j++){
+
+        %>
+        <td>1</td>
+        <%
+
+            }
+
+        %>
+    </tr>
+    <%
+
+        }
+
+    %>
+
+
+</table>
+
+
+
+<%
+
+    request.setAttribute("aa", "苍老师");
+
+%>
+
+<%= request.getAttribute("aa") %>
+
+${ aa }
 </body>
 </html>

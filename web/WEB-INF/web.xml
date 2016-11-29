@@ -186,5 +186,12 @@
         <servlet-name>ServletProductCookie</servlet-name>
         <url-pattern>/servletproductcookie</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>ServletRemoveCookie</servlet-name>
+        <servlet-class>com.demo.servletpath.cookie.ServletRemoveCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRemoveCookie</servlet-name>
+        <url-pattern>/servletremovecookie</url-pattern>
+    </servlet-mapping>
 </web-app>
