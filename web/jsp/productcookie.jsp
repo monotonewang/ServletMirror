@@ -11,7 +11,7 @@
     <title>productcookie</title>
 </head>
 <body>
-    <img src="../img/1.jpg"><a href="/ServletMirror/servletproductcookie?id=1">手电筒</a>
+    <img src="../img/1.jpg"><a href="/ServletMirror/servletproductcookie?id=1"><font color="red">手电筒</font></a>
     <img src="../img/2.jpg"><a href="/ServletMirror/servletproductcookie?id=2">手机</a>
     <img src="../img/3.jpg"><a href="/ServletMirror/servletproductcookie?id=3">台式电脑</a>
     <img src="../img/4.jpg"><a href="/ServletMirror/servletproductcookie?id=4">电冰箱</a>
