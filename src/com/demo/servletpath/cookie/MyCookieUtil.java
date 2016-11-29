@@ -25,7 +25,7 @@ public class MyCookieUtil {
 			for (Cookie cookie : cookies) {
 				// 获取cookie的名称，和name进行匹配
 				if(cookie.getName().equals(name)){
-					System.out.println("value="+cookie.getValue());
+					System.out.println("name="+cookie.getName());
 					return cookie;
 				}
 			}

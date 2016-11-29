@@ -178,5 +178,13 @@
         <servlet-name>ServletLast</servlet-name>
         <url-pattern>/servletlast</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletProductCookie</servlet-name>
+        <servlet-class>com.demo.servletpath.cookie.ServletProductCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletProductCookie</servlet-name>
+        <url-pattern>/servletproductcookie</url-pattern>
+    </servlet-mapping>
 
 </web-app>
