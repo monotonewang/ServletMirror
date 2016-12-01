@@ -170,6 +170,7 @@
         <servlet-name>ServletMyFirstInterFace</servlet-name>
         <url-pattern>/servletmyfirstinterface</url-pattern>
     </servlet-mapping>
+    <!--***************************************Cookie***************************************-->
     <servlet>
         <servlet-name>ServletLast</servlet-name>
         <servlet-class>com.demo.servletpath.cookie.ServletLast</servlet-class>
