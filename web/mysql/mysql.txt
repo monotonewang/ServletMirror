@@ -36,7 +36,7 @@ Mysql viesion 5.7.16
                mysql -u root -p
                (enter "root")
                show databases;
-               if(Navicat(false)==1862||1820){
+               if(1820||Navicat(false)==1862){
                    set PASSWORD=PASSWORD('root')
                }
 

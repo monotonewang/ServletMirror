@@ -57,8 +57,8 @@ public class JdbcTest {
                 student.setType(4 + i);
                 student.setIdCard("5" + i);
                 student.setExamStudent("21212" + i);
-                student.setStudentName("zhangsan" + i);
-                student.setLocation("beijing" + i);
+                student.setStudentName("张山" + i);
+                student.setLocation("北京" + i);
                 student.setGradle(2 + i);
 
 
