@@ -20,7 +20,11 @@ public class ServletMyInterFace extends HttpServlet {
     Dao dao = new Dao();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        response.setContentType("text/html;charset=UTF-8");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        System.out.println("username="+username+"password="+password);
+        response.getWriter().write("success");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
