@@ -162,6 +162,7 @@
         <servlet-name>ServletRegister</servlet-name>
         <url-pattern>/ServletRegister</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>ServletMyInterFace</servlet-name>
         <servlet-class>com.demo.servletpath.response.ServletMyInterFace</servlet-class>
@@ -170,7 +171,7 @@
         <servlet-name>ServletMyInterFace</servlet-name>
         <url-pattern>/ServletMyInterFace</url-pattern>
     </servlet-mapping>
-    <!--***************************************Cookie***************************************-->
+    <!--&lt;!&ndash;***************************************Cookie***************************************&ndash;&gt;-->
     <servlet>
         <servlet-name>ServletLast</servlet-name>
         <servlet-class>com.demo.servletpath.cookie.ServletLast</servlet-class>

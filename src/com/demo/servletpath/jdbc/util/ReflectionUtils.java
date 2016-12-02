@@ -1,4 +1,4 @@
-package com.demo.jdbc.util;
+package com.demo.servletpath.jdbc.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

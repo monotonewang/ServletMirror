@@ -1,6 +1,6 @@
-package com.demo.jdbc.dao;
+package com.demo.servletpath.jdbc.dao;
 
-import com.demo.jdbc.JdbcTools;
+import com.demo.servletpath.jdbc.JdbcTools;
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.lang.reflect.InvocationTargetException;

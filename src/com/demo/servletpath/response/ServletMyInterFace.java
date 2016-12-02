@@ -1,8 +1,8 @@
 package com.demo.servletpath.response;
 
 import com.alibaba.fastjson.JSONObject;
-import com.demo.jdbc.bean.Student;
-import com.demo.jdbc.dao.Dao;
+import com.demo.servletpath.jdbc.bean.Student;
+import com.demo.servletpath.jdbc.dao.Dao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

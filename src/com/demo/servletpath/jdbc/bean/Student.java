@@ -1,4 +1,4 @@
-package com.demo.jdbc.bean;
+package com.demo.servletpath.jdbc.bean;
 
 public class Student {
 	int flowID;

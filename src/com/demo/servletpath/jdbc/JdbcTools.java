@@ -1,4 +1,4 @@
-package com.demo.jdbc;
+package com.demo.servletpath.jdbc;
 
 import java.io.InputStream;
 import java.sql.*;
