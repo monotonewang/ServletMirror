@@ -196,4 +196,13 @@
         <servlet-name>ServletRemoveCookie</servlet-name>
         <url-pattern>/ServletRemoveCookie</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletSession</servlet-name>
+        <servlet-class>com.demo.servletpath.session.ServletSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSession</servlet-name>
+        <url-pattern>/ServletSession</url-pattern>
+    </servlet-mapping>
+
 </web-app>
