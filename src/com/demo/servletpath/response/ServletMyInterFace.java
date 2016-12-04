@@ -29,12 +29,12 @@ public class ServletMyInterFace extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String num = request.getParameter("num");
-        int index=Integer.parseInt(num);
+        String num = request.getParameter("num");//获取请求参数-->多少数据
+        int index = Integer.parseInt(num);
         String sql = "select FlowID flowID,Type type,IdCard idCard,ExamStudent examStudent,StudentName studentName,Location location,Gradle gradle from examstudent";
         List<Student> student = dao.getForList(Student.class, sql);
         //截取
-        List<Student> students = student.subList(0, index );
+        List<Student> students = student.subList(0, index);
         String str = JSONObject.toJSONString(students);
         response.getWriter().write(str);
     }
