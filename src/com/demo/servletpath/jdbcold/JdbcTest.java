@@ -1,8 +1,8 @@
-package com.demo.servletpath.jdbc;
+package com.demo.servletpath.jdbcold;
 
 
-import com.demo.servletpath.jdbc.bean.Student;
-import com.demo.servletpath.jdbc.bean.User;
+import com.demo.servletpath.jdbcold.bean.Student;
+import com.demo.servletpath.jdbcold.bean.User;
 import org.junit.Test;
 
 import java.io.InputStream;
@@ -198,7 +198,7 @@ public class JdbcTest {
 //		Driver driver=new Driver();
 
 
-//		String url="jdbc:mysql://127.0.0.1:3306/goods";
+//		String url="jdbcold:mysql://127.0.0.1:3306/goods";
 //		Properties info =new Properties();
 //		info.put("user","root");
 //		info.put("password", "root");

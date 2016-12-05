@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbc;
+package com.demo.servletpath.jdbcold;
 
 import org.junit.Test;
 

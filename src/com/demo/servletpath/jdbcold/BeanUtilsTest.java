@@ -1,6 +1,6 @@
-package com.demo.servletpath.jdbc;
+package com.demo.servletpath.jdbcold;
 
-import com.demo.servletpath.jdbc.bean.User;
+import com.demo.servletpath.jdbcold.bean.User;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 

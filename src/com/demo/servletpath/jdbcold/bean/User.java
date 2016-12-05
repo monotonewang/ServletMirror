@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbc.bean;
+package com.demo.servletpath.jdbcold.bean;
 
 import java.sql.Date;
 

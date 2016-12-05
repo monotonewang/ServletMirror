@@ -1,7 +1,7 @@
-package com.demo.servletpath.jdbc.dao;
+package com.demo.servletpath.jdbcold.dao;
 
-import com.demo.servletpath.jdbc.bean.Student;
-import com.demo.servletpath.jdbc.bean.User;
+import com.demo.servletpath.jdbcold.bean.Student;
+import com.demo.servletpath.jdbcold.bean.User;
 import org.junit.Test;
 
 import java.sql.Date;

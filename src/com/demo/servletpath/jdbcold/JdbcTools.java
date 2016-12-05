@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbc;
+package com.demo.servletpath.jdbcold;
 
 import java.io.InputStream;
 import java.sql.*;
@@ -8,7 +8,7 @@ public class JdbcTools {
     public static Connection getConnection() throws Exception {
         //获取字符串
         Properties pro = new Properties();
-        InputStream in = JdbcTools.class.getClassLoader().getResourceAsStream("/src/jdbc.properties");
+        InputStream in = JdbcTools.class.getClassLoader().getResourceAsStream("/src/jdbcold.properties");
         String driver;
         String jdbcUrl;
         Connection connection;
@@ -19,8 +19,8 @@ public class JdbcTools {
             String user = pro.getProperty("user");
             String password = pro.getProperty("password");
         } else {
-            driver = "com.mysql.jdbc.Driver";
-            jdbcUrl = "jdbc:mysql://127.0.0.1:3306/jdbctest?characterEncoding=utf8&useSSL=true";
+            driver = "com.mysql.jdbcold.Driver";
+            jdbcUrl = "jdbcold:mysql://127.0.0.1:3306/jdbctest?characterEncoding=utf8&useSSL=true";
         }
         //加载驱动
         Class.forName(driver);
