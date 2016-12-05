@@ -221,7 +221,7 @@ public class JdbcTest {
         String password = null;
 
         Properties pro = new Properties();
-        InputStream in = getClass().getClassLoader().getResourceAsStream("jdbc.properties");
+        InputStream in = getClass().getClassLoader().getResourceAsStream("com/demo/servletpath/jdbc.properties");
         pro.load(in);
 //		driverClass=pro.getProperty("driver");
         jdbcUrl = pro.getProperty("jdbcUrl");
