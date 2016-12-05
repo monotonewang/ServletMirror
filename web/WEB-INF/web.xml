@@ -204,5 +204,22 @@
         <servlet-name>ServletSession</servlet-name>
         <url-pattern>/ServletSession</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CheckcodeSessionServlet</servlet-name>
+        <servlet-class>com.demo.servletpath.session.CheckcodeSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckcodeSessionServlet</servlet-name>
+        <url-pattern>/CheckcodeSessionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginSessionServlet</servlet-name>
+        <servlet-class>com.demo.servletpath.session.LoginSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginSessionServlet</servlet-name>
+        <url-pattern>/LoginSessionServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
