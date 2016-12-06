@@ -220,6 +220,21 @@
         <servlet-name>LoginSessionServlet</servlet-name>
         <url-pattern>/LoginSessionServlet</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+    <servlet-name>ServletSessionId</servlet-name>
+    <servlet-class>com.demo.servletpath.session.ServletSessionId</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSessionId</servlet-name>
+        <url-pattern>/ServletSessionId</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletGetSessionId</servlet-name>
+        <servlet-class>com.demo.servletpath.session.ServletGetSessionId</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletGetSessionId</servlet-name>
+        <url-pattern>/ServletGetSessionId</url-pattern>
+    </servlet-mapping>
 
 </web-app>
