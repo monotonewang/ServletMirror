@@ -1,4 +1,4 @@
-package com.demo.servletpath.jspel;
+package com.demo.servletpath.jspel.bean;
 
 import java.util.Date;
 

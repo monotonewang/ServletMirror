@@ -1,5 +1,5 @@
 
-<%@page import="com.demo.servletpath.jspel.User2"%>
+<%@page import="com.demo.servletpath.jspel.bean.User2"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>

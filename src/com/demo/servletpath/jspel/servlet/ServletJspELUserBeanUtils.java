@@ -1,5 +1,7 @@
-package com.demo.servletpath.jspel;
+package com.demo.servletpath.jspel.servlet;
 
+import com.demo.servletpath.jspel.bean.User;
+import com.demo.servletpath.jspel.utils.MyDateConverter;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 

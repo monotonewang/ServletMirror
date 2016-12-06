@@ -1,4 +1,4 @@
-package com.demo.servletpath.jspel;
+package com.demo.servletpath.jspel.bean;
 
 /**
  * Created by 7 on 2016/12/6.

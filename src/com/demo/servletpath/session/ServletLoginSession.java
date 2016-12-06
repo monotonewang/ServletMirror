@@ -10,8 +10,8 @@ import java.io.IOException;
 /**
  * Created by 7 on 2016/12/5.
  */
-@WebServlet(name = "LoginSessionServlet")
-public class LoginSessionServlet extends HttpServlet {
+@WebServlet(name = "ServletLoginSession")
+public class ServletLoginSession extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }

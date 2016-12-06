@@ -1,4 +1,4 @@
-package com.demo.servletpath.session;
+package com.demo.servletpath.response;
 
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
@@ -17,7 +17,7 @@ import java.util.Random;
  * @author Administrator
  *
  */
-public class CheckcodeSessionServlet extends HttpServlet {
+public class ServletCheckcode extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -54,7 +54,6 @@ public class CheckcodeSessionServlet extends HttpServlet {
 		Random random = new Random();
 		int x = 20;
 		int y = 20;
-		StringBuffer stringBuffer=new StringBuffer();
 		for(int i=0;i<4;i++){
 			
 			// void rotate(double theta, double x, double y)  
@@ -68,20 +67,13 @@ public class CheckcodeSessionServlet extends HttpServlet {
 			int index = random.nextInt(words.length());
 			// 返回指定下标位置的字符，随机获取下标
 			char ch = words.charAt(index);
-			stringBuffer.append(ch);
 			// 写字符串
 			g.drawString(""+ch, x, y);
 			
 			g.rotate(-hudu, x, y);
 			x += 20;
 		}
-
-		// 存入session中
-		//HttpSession session = request.getSession();
-		//session.setAttribute("code", sb.toString());
-
-		request.getSession().setAttribute("code", stringBuffer.toString());
-
+		
 		// 设置颜色
 		g.setColor(Color.GREEN);
 		int x1,x2,y1,y2;

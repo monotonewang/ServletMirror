@@ -1,4 +1,6 @@
-package com.demo.servletpath.jspel;
+package com.demo.servletpath.jspel.servlet;
+
+import com.demo.servletpath.jspel.bean.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

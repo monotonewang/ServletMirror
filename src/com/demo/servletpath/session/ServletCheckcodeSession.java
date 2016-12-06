@@ -1,28 +1,23 @@
-package com.demo.servletpath.response;
+package com.demo.servletpath.session;
 
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Random;
-
-import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Random;
 
 /**
  * 验证码
  * @author Administrator
  *
  */
-public class CheckcodeServlet extends HttpServlet {
+public class ServletCheckcodeSession extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -59,6 +54,7 @@ public class CheckcodeServlet extends HttpServlet {
 		Random random = new Random();
 		int x = 20;
 		int y = 20;
+		StringBuffer stringBuffer=new StringBuffer();
 		for(int i=0;i<4;i++){
 			
 			// void rotate(double theta, double x, double y)  
@@ -72,13 +68,20 @@ public class CheckcodeServlet extends HttpServlet {
 			int index = random.nextInt(words.length());
 			// 返回指定下标位置的字符，随机获取下标
 			char ch = words.charAt(index);
+			stringBuffer.append(ch);
 			// 写字符串
 			g.drawString(""+ch, x, y);
 			
 			g.rotate(-hudu, x, y);
 			x += 20;
 		}
-		
+
+		// 存入session中
+		//HttpSession session = request.getSession();
+		//session.setAttribute("code", sb.toString());
+
+		request.getSession().setAttribute("code", stringBuffer.toString());
+
 		// 设置颜色
 		g.setColor(Color.GREEN);
 		int x1,x2,y1,y2;

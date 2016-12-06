@@ -46,7 +46,7 @@
     function run(){
         // 获取图片
         var image = document.getElementById("imgId");
-        image.src = "/ServletMirror/CheckcodeSessionServlet?"+new Date().getTime();
+        image.src = "/ServletMirror/ServletCheckcodeSession?"+new Date().getTime();
     }
 
 </script>

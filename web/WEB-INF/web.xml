@@ -69,22 +69,22 @@
         <url-pattern>/ServletDemo7</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>CountServlet</servlet-name>
-        <servlet-class>com.demo.servletpath.servlet.CountServlet</servlet-class>
+        <servlet-name>ServletCount</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletCount</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CountServlet</servlet-name>
-        <url-pattern>/CountServlet</url-pattern>
+        <servlet-name>ServletCount</servlet-name>
+        <url-pattern>/ServletCount</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>ReadServlet</servlet-name>
-        <servlet-class>com.demo.servletpath.servlet.ReadServlet</servlet-class>
+        <servlet-name>ServletRead</servlet-name>
+        <servlet-class>com.demo.servletpath.servlet.ServletRead</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ReadServlet</servlet-name>
-        <url-pattern>/ReadServlet</url-pattern>
+        <servlet-name>ServletRead</servlet-name>
+        <url-pattern>/ServletRead</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletReponseHeader</servlet-name>
@@ -149,12 +149,12 @@
         <url-pattern>/ServletDownLoad</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>CheckcodeServlet</servlet-name>
-        <servlet-class>com.demo.servletpath.response.CheckcodeServlet</servlet-class>
+        <servlet-name>ServletCheckcode</servlet-name>
+        <servlet-class>com.demo.servletpath.response.ServletCheckcode</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CheckcodeServlet</servlet-name>
-        <url-pattern>/CheckcodeServlet</url-pattern>
+        <servlet-name>ServletCheckcode</servlet-name>
+        <url-pattern>/ServletCheckcode</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletRequest1</servlet-name>
@@ -215,20 +215,20 @@
         <url-pattern>/ServletSession</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>CheckcodeSessionServlet</servlet-name>
-        <servlet-class>com.demo.servletpath.session.CheckcodeSessionServlet</servlet-class>
+        <servlet-name>ServletCheckcodeSession</servlet-name>
+        <servlet-class>com.demo.servletpath.session.ServletCheckcodeSession</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CheckcodeSessionServlet</servlet-name>
-        <url-pattern>/CheckcodeSessionServlet</url-pattern>
+        <servlet-name>ServletCheckcodeSession</servlet-name>
+        <url-pattern>/ServletCheckcodeSession</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>LoginSessionServlet</servlet-name>
-        <servlet-class>com.demo.servletpath.session.LoginSessionServlet</servlet-class>
+        <servlet-name>ServletLoginSession</servlet-name>
+        <servlet-class>com.demo.servletpath.session.ServletLoginSession</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>LoginSessionServlet</servlet-name>
-        <url-pattern>/LoginSessionServlet</url-pattern>
+        <servlet-name>ServletLoginSession</servlet-name>
+        <url-pattern>/ServletLoginSession</url-pattern>
     </servlet-mapping>
     <servlet>
     <servlet-name>ServletSessionId</servlet-name>
@@ -248,7 +248,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletJspELUser</servlet-name>
-        <servlet-class>com.demo.servletpath.jspel.ServletJspELUser</servlet-class>
+        <servlet-class>com.demo.servletpath.jspel.servlet.ServletJspELUser</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletJspELUser</servlet-name>
@@ -256,7 +256,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletJspELUserBeanUtils</servlet-name>
-        <servlet-class>com.demo.servletpath.jspel.ServletJspELUserBeanUtils</servlet-class>
+        <servlet-class>com.demo.servletpath.jspel.servlet.ServletJspELUserBeanUtils</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletJspELUserBeanUtils</servlet-name>

@@ -1,5 +1,6 @@
-package com.demo.servletpath.jspel;
+package com.demo.servletpath.jspel.utils;
 
+import com.demo.servletpath.jspel.bean.User;
 import org.junit.Test;
 
 import java.beans.BeanInfo;

@@ -1,4 +1,4 @@
-<%@ page import="com.demo.servletpath.jspel.User" %><%--
+<%@ page import="com.demo.servletpath.jspel.bean.User" %><%--
   Created by IntelliJ IDEA.
   User: 7
   Date: 2016/12/6
@@ -26,7 +26,7 @@
 <%--${ user.getPassword}--%>
 <h3>使用jsp方式封装数据</h3>
 <!-- 使用jsp的标签封装数据 -->
-<jsp:useBean id="u" class="com.demo.servletpath.jspel.User"></jsp:useBean>
+<jsp:useBean id="u" class="com.demo.servletpath.jspel.bean.User"></jsp:useBean>
 <jsp:setProperty property="*" name="u"/>
 
 <jsp:getProperty property="username" name="u"/>

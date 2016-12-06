@@ -12,8 +12,8 @@ import java.io.IOException;
  * show website visit times
  * Created by WangTest on 2016/11/27.
  */
-@WebServlet(name = "CountServlet")
-public class CountServlet extends HttpServlet {
+@WebServlet(name = "ServletCount")
+public class ServletCount extends HttpServlet {
     /**
      * 实例一被创建，就调用init方法初始化
      *

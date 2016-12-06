@@ -11,8 +11,8 @@ import java.util.Properties;
 /**
  * Created by WangTest on 2016/11/27.
  */
-@WebServlet(name = "ReadServlet")
-public class ReadServlet extends HttpServlet {
+@WebServlet(name = "ServletRead")
+public class ServletRead extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
