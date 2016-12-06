@@ -20,6 +20,8 @@ public class ServletSession extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //判断是否是第一次登陆，
+        //用于调试服务器errorpage 500
+//        int a=10/0;
         String id = request.getParameter("id");
         String names[] ={"手电筒","冰箱","电脑","电视机","电话"};
         if(id==null){

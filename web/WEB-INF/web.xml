@@ -3,6 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <!--设置全局错误界面-->
+    <error-page>
+        <location>/jsp/jspel/errorpage/error404.jsp</location>
+        <error-code>404</error-code>
+    </error-page>
+    <error-page>
+        <location>/jsp/jspel/errorpage/error500.jsp</location>
+        <error-code>500</error-code>
+    </error-page>
+
     <!--ServletContext-->
     <context-param>
         <param-name>encoding</param-name>
@@ -235,6 +245,22 @@
     <servlet-mapping>
         <servlet-name>ServletGetSessionId</servlet-name>
         <url-pattern>/ServletGetSessionId</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletJspELUser</servlet-name>
+        <servlet-class>com.demo.servletpath.jspel.ServletJspELUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletJspELUser</servlet-name>
+        <url-pattern>/ServletJspELUser</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletJspELUserBeanUtils</servlet-name>
+        <servlet-class>com.demo.servletpath.jspel.ServletJspELUserBeanUtils</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletJspELUserBeanUtils</servlet-name>
+        <url-pattern>/ServletJspELUserBeanUtils</url-pattern>
     </servlet-mapping>
 
 </web-app>
