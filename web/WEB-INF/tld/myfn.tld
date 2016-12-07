@@ -16,4 +16,10 @@
         <function-signature>java.lang.String sayHello(java.lang.String)</function-signature>
     </function>
 
+    <function>
+        <name>decode</name>
+        <function-class>com.demo.servletpath.mvpdemo.utils.MyEl</function-class>
+        <function-signature>java.lang.String myDecode(java.lang.String)</function-signature>
+    </function>
+
 </taglib>

@@ -262,5 +262,29 @@
         <servlet-name>ServletJspELUserBeanUtils</servlet-name>
         <url-pattern>/ServletJspELUserBeanUtils</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletMvpRegister</servlet-name>
+        <servlet-class>com.demo.servletpath.mvpdemo.action.ServletMvpRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletMvpRegister</servlet-name>
+        <url-pattern>/ServletMvpRegister</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletMvpLogin</servlet-name>
+        <servlet-class>com.demo.servletpath.mvpdemo.action.ServletMvpLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletMvpLogin</servlet-name>
+        <url-pattern>/ServletMvpLogin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletMvpCheckCode</servlet-name>
+        <servlet-class>com.demo.servletpath.mvpdemo.action.ServletMvpCheckCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletMvpCheckCode</servlet-name>
+        <url-pattern>/ServletMvpCheckCode</url-pattern>
+    </servlet-mapping>
 
 </web-app>
