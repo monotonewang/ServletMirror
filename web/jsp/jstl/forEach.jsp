@@ -51,8 +51,45 @@
 </c:forEach>
 <h4>遍历对象的集合</h4>
 <%
-    List<User> listUser=new ArrayList<>();
-    listUser.add(new User(""));
+    List<User> uList = new ArrayList<User>();
+    uList.add(new User("美美","123"));
+    uList.add(new User("小风","234"));
+    uList.add(new User("芙蓉","345"));
+    request.setAttribute("uList", uList);
 %>
+<c:forEach var="user" items="${ uList }">
+    ${ user.username } -- ${ user.password }
+</c:forEach>
+
+
+<h4>迭代数据</h4>
+<h4>迭代从1到10</h4>
+<c:forEach var="i" begin="1" end="10" step="2">
+    ${ i }
+</c:forEach>
+
+
+<h4>计算从1加到100的和</h4>
+<c:set var="sum" value="0" scope="page"></c:set>
+<c:forEach var="i" begin="1" end="100" step="1" varStatus="status">
+    <c:set var="sum" value="${ sum + i }"></c:set>
+</c:forEach>
+${ sum }
+
+
+<h4>遍历10到100的偶数，每到第3个数，显示红色</h4>
+<c:forEach var="i" begin="10" end="100" step="2" varStatus="status">
+    <c:choose>
+        <c:when test="${ status.first }">
+            <font color="blue">${ i }</font>
+        </c:when>
+        <c:when test="${ status.count % 3 eq 0 }">
+            <font color="red">${ i }</font>
+        </c:when>
+        <c:otherwise>
+            ${ i }
+        </c:otherwise>
+    </c:choose>
+</c:forEach>
 </body>
 </html>
