@@ -12,8 +12,8 @@ public class JdbcUtils1 {
 		Class.forName("com.mysql.jdbc.Driver");
 
 		// 2.获取连接
-		Connection con = DriverManager.getConnection("jdbc:mysql:///day17",
-				"root", "abc");
+		Connection con = DriverManager.getConnection("jdbc:mysql:///jdbctest",
+				"root", "root");
 
 		return con;
 	}

@@ -15,13 +15,13 @@ public class BeanUtilsTest {
 		
 		BeanUtils.setProperty(object, "name", "21212");
 		System.out.println(object);
-		Object val=BeanUtils.getProperty(object, "name3");
+		Object val=BeanUtils.getProperty(object, "name");
 		System.out.println(val);
 	}
 	@Test
 	public void test() throws IllegalAccessException, InvocationTargetException {
 		Object object=new User();
-		
+
 		BeanUtils.setProperty(object, "name", "21212");
 		System.out.println(object);
 	}
