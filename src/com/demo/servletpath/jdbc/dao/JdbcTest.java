@@ -2,7 +2,6 @@ package com.demo.servletpath.jdbc.dao;
 
 
 import com.demo.servletpath.jdbc.utils.JdbcUtils;
-import com.demo.servletpath.jdbc.bean.Student;
 import com.demo.servletpath.jdbc.bean.User;
 import org.junit.Test;
 
@@ -26,7 +25,7 @@ public class JdbcTest {
                 user.setName(resultSet.getString(2));
                 user.setPassword(resultSet.getString(3));
                 user.setEmail(resultSet.getString(4));
-                user.setBrith((Date) resultSet.getObject(5));
+//                user.setBrith((Date) resultSet.getObject(5));
                 System.out.println(user);
             }
         } catch (Exception e) {
@@ -37,99 +36,99 @@ public class JdbcTest {
         }
     }
 
-    /**
-     * 添加数据
-     */
-    @Test
-    public void testPreparedStatement() {
-        Connection connection = null;
-        //有限的防止sql注入
-        PreparedStatement preparedStatement = null;
-        try {
-            connection = JdbcUtils.getConnectionByRes();
-            String sql = "insert into examstudent (FlowId,Type,IDCard,ExamStudent,StudentName,Location,Gradle) values(?,?,?,?,?,?,?)";
-            preparedStatement = connection.prepareStatement(sql);
-
-            for (int i = 0; i < 80; i++) {
-                Student student = new Student();
-                student.setFlowID(1 + i);
-                student.setType(4 + i);
-                student.setIdCard("5" + i);
-                student.setExamStudent("21212" + i);
-                student.setStudentName("张山" + i);
-                student.setLocation("北京" + i);
-                student.setGradle(2 + i);
-
-
-                preparedStatement.setInt(1, student.getFlowID());
-                preparedStatement.setInt(2, student.getType());
-                preparedStatement.setString(3, student.getIdCard());
-                preparedStatement.setString(4, student.getExamStudent());
-                preparedStatement.setString(5, student.getStudentName());
-                preparedStatement.setString(6, student.getLocation());
-                preparedStatement.setInt(7, student.getGradle());
-                preparedStatement.executeUpdate();
-            }
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } finally {
-            JdbcUtils.release(null, preparedStatement, connection);
-        }
-
-    }
-
-    /**
-     * 添加新的学生
-     */
-    @Test
-    public void addNewStudent() {
-        Student student = new Student();
-        student.setFlowID(1);
-        student.setType(4);
-        student.setIdCard("1212121");
-        student.setExamStudent("2005020202");
-        student.setStudentName("21212");
-        student.setLocation("212125555");
-        student.setGradle(1);
-        String sql = "insert into examstudent values (" + student.getFlowID() + "," + student.getType() + "," + student.getIdCard() + "," + student.getExamStudent() + "," + student.getStudentName() + "," + student.getLocation() + "," + student.getGradle() + ")";
-        insert(sql);
-    }
-
-    /**
-     * 得到学生对象
-     */
-    @Test
-    public void selectStudent() {
-        Connection connection = null;
-        Statement stat = null;
-        ResultSet resultSet = null;
-        try {
-            connection = JdbcUtils.getConnectionByRes();
-            stat = connection.createStatement();
-            String sql = "select * from examstudent";
-            resultSet = stat.executeQuery(sql);
-            while (resultSet.next()) {
-                Student student = new Student();
-                student.setFlowID(resultSet.getInt(1));
-                student.setType(resultSet.getInt(2));
-                student.setIdCard(resultSet.getString(3));
-                student.setExamStudent(resultSet.getString(4));
-                student.setStudentName(resultSet.getString(5));
-                student.setLocation(resultSet.getString(6));
-                student.setGradle(resultSet.getInt(7));
-//				ResultSetMetaData metaData=resultSet.getMetaData();
-//				String str=metaData.getColumnLabel(1);
-//				System.out.println(str);
-                System.out.println(student);
-            }
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        JdbcUtils.release(resultSet, null, connection);
-
-    }
+//    /**
+//     * 添加数据
+//     */
+//    @Test
+//    public void testPreparedStatement() {
+//        Connection connection = null;
+//        //有限的防止sql注入
+//        PreparedStatement preparedStatement = null;
+//        try {
+//            connection = JdbcUtils.getConnectionByRes();
+//            String sql = "insert into examstudent (FlowId,Type,IDCard,ExamStudent,StudentName,Location,Gradle) values(?,?,?,?,?,?,?)";
+//            preparedStatement = connection.prepareStatement(sql);
+//
+//            for (int i = 0; i < 80; i++) {
+//                Student student = new Student();
+//                student.setFlowID(1 + i);
+//                student.setType(4 + i);
+//                student.setIdCard("5" + i);
+//                student.setExamStudent("21212" + i);
+//                student.setStudentName("张山" + i);
+//                student.setLocation("北京" + i);
+//                student.setGradle(2 + i);
+//
+//
+//                preparedStatement.setInt(1, student.getFlowID());
+//                preparedStatement.setInt(2, student.getType());
+//                preparedStatement.setString(3, student.getIdCard());
+//                preparedStatement.setString(4, student.getExamStudent());
+//                preparedStatement.setString(5, student.getStudentName());
+//                preparedStatement.setString(6, student.getLocation());
+//                preparedStatement.setInt(7, student.getGradle());
+//                preparedStatement.executeUpdate();
+//            }
+//        } catch (Exception e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        } finally {
+//            JdbcUtils.release(null, preparedStatement, connection);
+//        }
+//
+//    }
+//
+//    /**
+//     * 添加新的学生
+//     */
+//    @Test
+//    public void addNewStudent() {
+//        Student student = new Student();
+//        student.setFlowID(1);
+//        student.setType(4);
+//        student.setIdCard("1212121");
+//        student.setExamStudent("2005020202");
+//        student.setStudentName("21212");
+//        student.setLocation("212125555");
+//        student.setGradle(1);
+//        String sql = "insert into examstudent values (" + student.getFlowID() + "," + student.getType() + "," + student.getIdCard() + "," + student.getExamStudent() + "," + student.getStudentName() + "," + student.getLocation() + "," + student.getGradle() + ")";
+//        insert(sql);
+//    }
+//
+//    /**
+//     * 得到学生对象
+//     */
+//    @Test
+//    public void selectStudent() {
+//        Connection connection = null;
+//        Statement stat = null;
+//        ResultSet resultSet = null;
+//        try {
+//            connection = JdbcUtils.getConnectionByRes();
+//            stat = connection.createStatement();
+//            String sql = "select * from examstudent";
+//            resultSet = stat.executeQuery(sql);
+//            while (resultSet.next()) {
+//                Student student = new Student();
+//                student.setFlowID(resultSet.getInt(1));
+//                student.setType(resultSet.getInt(2));
+//                student.setIdCard(resultSet.getString(3));
+//                student.setExamStudent(resultSet.getString(4));
+//                student.setStudentName(resultSet.getString(5));
+//                student.setLocation(resultSet.getString(6));
+//                student.setGradle(resultSet.getInt(7));
+////				ResultSetMetaData metaData=resultSet.getMetaData();
+////				String str=metaData.getColumnLabel(1);
+////				System.out.println(str);
+//                System.out.println(student);
+//            }
+//        } catch (Exception e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        JdbcUtils.release(resultSet, null, connection);
+//
+//    }
 
     /**
      * 查询sql的方法

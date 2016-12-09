@@ -126,7 +126,6 @@ public class JdbcCRUD {
 			// 6.释放资源
 			JdbcUtils.release(null, st, con);
 		}
-
 	}
 
 	// delete测试
