@@ -1,9 +1,9 @@
-package com.demo.servletpath.jdbcold;
+package com.demo.servletpath.jdbc.dao;
 
 
 import com.demo.servletpath.jdbc.utils.JdbcUtils;
-import com.demo.servletpath.jdbcold.bean.Student;
-import com.demo.servletpath.jdbcold.bean.User;
+import com.demo.servletpath.jdbc.bean.Student;
+import com.demo.servletpath.jdbc.bean.User;
 import org.junit.Test;
 
 import java.sql.*;

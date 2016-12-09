@@ -1,7 +1,7 @@
-package com.demo.servletpath.jdbcold.dao;
+package com.demo.servletpath.jdbc.dao;
 
-import com.demo.servletpath.jdbcold.bean.Student;
-import com.demo.servletpath.jdbcold.bean.User;
+import com.demo.servletpath.jdbc.bean.Student;
+import com.demo.servletpath.jdbc.bean.User;
 import org.junit.Test;
 
 import java.sql.Date;
@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public class DaoTest {
+public class DaoImpl {
 	Dao dao=new Dao();
 	
 	@Test

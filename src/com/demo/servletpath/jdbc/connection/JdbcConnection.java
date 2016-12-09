@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbc.connector;
+package com.demo.servletpath.jdbc.connection;
 
 import com.mysql.jdbc.Driver;
 import org.junit.Test;

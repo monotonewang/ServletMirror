@@ -40,9 +40,6 @@ public class JdbcUtils {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		if(con!=null){
-			System.out.print("not null");
-		}
 		return con;
 	}
 

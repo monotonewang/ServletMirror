@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbc.connector;
+package com.demo.servletpath.jdbc.connection;
 
 import com.demo.servletpath.jdbc.utils.JdbcUtils;
 import org.junit.Test;
@@ -8,13 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcDemo1 {
-	//	@Test
-	public static void main(String[] args) throws SQLException {
-//		getConnection();
-
-
-	}
+public class JdbcCRUD {
 
 	@Test
 	public void testSelect() throws SQLException {
@@ -50,7 +44,7 @@ public class JdbcDemo1 {
 	}
 
 	@Test
-	private  void AbsoluteTest1() throws SQLException {
+	public  void AbsoluteTest1() throws SQLException {
 		// 1.得到一个Connection
 		Connection con = JdbcUtils.getConnectionByRes();
 

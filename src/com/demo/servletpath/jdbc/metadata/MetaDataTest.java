@@ -1,5 +1,6 @@
-package com.demo.servletpath.jdbcold;
+package com.demo.servletpath.jdbc.metadata;
 
+import com.demo.servletpath.jdbc.utils.JdbcUtils;
 import org.junit.Test;
 
 import java.sql.*;
@@ -12,36 +13,31 @@ public class MetaDataTest {
      */
     @Test
     public void testResultSetMetaData() {
+        String sql = "SELECT id ,username, password ,email FROM user";
+//            String sql = "SELECT * FROM user";
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-
         try {
-            connection = JdbcTools.getConnection();
-            String sql = "SELECT id, name customerName, email, brith " +
-                    "FROM user";
+            connection = JdbcUtils.getConnectionByRes();
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
-//1. 得到 ResultSetMetaData 对象
+            //1. 得到 ResultSetMetaData 对象
             ResultSetMetaData rsmd = resultSet.getMetaData();
             //2. 得到列的个数
             int columnCount = rsmd.getColumnCount();
             System.out.println(columnCount);
-
             for (int i = 0; i < columnCount; i++) {
                 //3. 得到列名
                 String columnName = rsmd.getColumnName(i + 1);
                 //4. 得到列的别名
                 String columnLabel = rsmd.getColumnLabel(i + 1);
-
                 System.out.println(columnName + ", " + columnLabel);
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcTools.release(resultSet, preparedStatement, connection);
+            JdbcUtils.release(resultSet, preparedStatement, connection);
         }
     }
 
@@ -54,10 +50,8 @@ public class MetaDataTest {
     public void testDatabaseMetaData() {
         Connection connection = null;
         ResultSet resultSet = null;
-
         try {
-
-            connection = JdbcTools.getConnection();
+            connection = JdbcUtils.getConnectionByRes();
             DatabaseMetaData data = connection.getMetaData();
             //可以得到数据库本身的一些基本信息
             //1. 得到数据库的版本号
@@ -72,12 +66,10 @@ public class MetaDataTest {
                 System.out.println(resultSet.getString(1));
             }
 
-            //...
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcTools.release(resultSet, null, connection);
+            JdbcUtils.release(resultSet, null, connection);
         }
     }
 

@@ -1,6 +1,6 @@
-package com.demo.servletpath.jdbcold.dao;
+package com.demo.servletpath.jdbc.dao;
 
-import com.demo.servletpath.jdbcold.JdbcTools;
+import com.demo.servletpath.jdbc.utils.JdbcUtils;
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -22,7 +22,7 @@ public class Dao {
 		Connection con =null;
 		PreparedStatement ps=null;
 		try {
-			con= JdbcTools.getConnection();
+			con= JdbcUtils.getConnectionByRes();
 			ps=con.prepareStatement(sql);
 			for(int i=0;i<args.length;i++){
 				ps.setObject(i+1, args[i]);
@@ -32,7 +32,7 @@ public class Dao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally{
-			JdbcTools.release(null, ps, con);
+			JdbcUtils.release(null, ps, con);
 		}
 	}
 
@@ -50,7 +50,7 @@ public class Dao {
 		PreparedStatement ps=null;
 		ResultSet rs=null;
 		try {
-			con=JdbcTools.getConnection();
+			con=JdbcUtils.getConnectionByRes();
 			ps=con.prepareStatement(sql);
 
 			//去查询sql数据
@@ -82,7 +82,7 @@ public class Dao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally{
-			JdbcTools.release(null, ps, con);
+			JdbcUtils.release(null, ps, con);
 		}
 		
 		return null;
@@ -96,7 +96,7 @@ public class Dao {
 		ResultSet rs=null;
 		try {
 			//1.获取连接
-			con=JdbcTools.getConnection();
+			con=JdbcUtils.getConnectionByRes();
 			ps=con.prepareStatement(sql);
 
 			//去查询sql数据
@@ -117,7 +117,7 @@ public class Dao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally{
-			JdbcTools.release(null, ps, con);
+			JdbcUtils.release(null, ps, con);
 		}
 		
 		return null;
@@ -202,7 +202,7 @@ public class Dao {
 		ResultSet rs=null;
 		try {
 			//1.获取连接
-			con=JdbcTools.getConnection();
+			con=JdbcUtils.getConnectionByRes();
 			ps=con.prepareStatement(sql);
 
 			//去查询sql数据
@@ -217,7 +217,7 @@ public class Dao {
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}finally{
-			JdbcTools.release(null, ps, con);
+			JdbcUtils.release(null, ps, con);
 		
 		}
 		//2.取得结果集

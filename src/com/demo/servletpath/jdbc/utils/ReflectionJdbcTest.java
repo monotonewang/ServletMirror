@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbcold;
+package com.demo.servletpath.jdbc.utils;
 
 import org.junit.Test;
 
@@ -24,7 +24,7 @@ public class ReflectionJdbcTest {
 		PreparedStatement preparedStatement=null;
 		ResultSet resultSet=null;
 		try {
-			connection=JdbcTools.getConnection();
+			connection=JdbcUtils.getConnectionByRes();
 			preparedStatement=connection.prepareStatement(sql);
 			resultSet=preparedStatement.executeQuery();
 			ResultSetMetaData rsmd=resultSet.getMetaData();
@@ -37,10 +37,8 @@ public class ReflectionJdbcTest {
 				}
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return null;
 	}
 	

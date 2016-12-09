@@ -1,6 +1,6 @@
 package com.demo.servletpath.servlet;
 
-import com.demo.servletpath.jdbcold.dao.Dao;
+import com.demo.servletpath.jdbc.dao.Dao;
 
 import javax.servlet.*;
 import java.io.IOException;

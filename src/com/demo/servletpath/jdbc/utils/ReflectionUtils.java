@@ -1,4 +1,4 @@
-package com.demo.servletpath.jdbcold.util;
+package com.demo.servletpath.jdbc.utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -12,7 +12,6 @@ import java.lang.reflect.Type;
  * 提供访问私有变量, 获取泛型类型 Class, 提取集合中元素属性等 Utils 函数
  */
 public class ReflectionUtils {
-
 
 	/**
 	 *  通过反射, 获得定义 Class 时声明的父类的泛型参数的类型
@@ -37,7 +36,6 @@ public class ReflectionUtils {
 		if(!(params[index] instanceof Class)){
 			return Object.class;
 		}
-		
 		return (Class) params[index];
 	}
 
@@ -71,7 +69,6 @@ public class ReflectionUtils {
 			}
 			//..
 		}
-		
 		return null;
 	}
 	
