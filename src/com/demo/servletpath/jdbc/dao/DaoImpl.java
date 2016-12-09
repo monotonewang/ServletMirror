@@ -1,6 +1,5 @@
 package com.demo.servletpath.jdbc.dao;
 
-import com.demo.servletpath.jdbc.bean.Student;
 import com.demo.servletpath.jdbc.bean.User;
 import org.junit.Test;
 
@@ -11,7 +10,7 @@ import java.util.List;
 
 public class DaoImpl {
 	Dao dao=new Dao();
-	
+
 	@Test
 	public void testUpdate() {
 		String sql="insert into user(id,name,email,brith) "
@@ -25,11 +24,16 @@ public class DaoImpl {
 		User user=dao.get(User.class, sql, 1);
 		System.out.println(user);
 	}
-	
+
+	/**
+	 * 查询方法，得到多个结果集
+	 * @param clazz 类对象
+	 * @param <T> javaBean
+	 */
 	@Test
-	public void testGetForList(){
+	public <T> void testGetForList(Class<T> clazz){
 		String sql="select FlowID flowID,Type type,IdCard idCard,ExamStudent examStudent,StudentName studentName,Location location,Gradle gradle from examstudent";
-		List<Student> students=dao.getForList(Student.class, sql);
+		List<T> students=dao.getForList(clazz, sql);
 		System.out.println(students);
 	}
 
