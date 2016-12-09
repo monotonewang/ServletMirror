@@ -1,13 +1,12 @@
 package com.demo.servletpath.jdbcold;
 
 
+import com.demo.servletpath.jdbc.utils.JdbcUtils;
 import com.demo.servletpath.jdbcold.bean.Student;
 import com.demo.servletpath.jdbcold.bean.User;
 import org.junit.Test;
 
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Properties;
 
 public class JdbcTest {
     @Test
@@ -17,7 +16,7 @@ public class JdbcTest {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
-            connection = JdbcTools.getConnection();
+            connection = JdbcUtils.getConnectionByRes();
             String sql = "select * from user";
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
@@ -34,7 +33,7 @@ public class JdbcTest {
             // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
-            JdbcTools.release(resultSet, preparedStatement, connection);
+            JdbcUtils.release(resultSet, preparedStatement, connection);
         }
     }
 
@@ -47,7 +46,7 @@ public class JdbcTest {
         //有限的防止sql注入
         PreparedStatement preparedStatement = null;
         try {
-            connection = JdbcTools.getConnection();
+            connection = JdbcUtils.getConnectionByRes();
             String sql = "insert into examstudent (FlowId,Type,IDCard,ExamStudent,StudentName,Location,Gradle) values(?,?,?,?,?,?,?)";
             preparedStatement = connection.prepareStatement(sql);
 
@@ -75,7 +74,7 @@ public class JdbcTest {
             // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
-            JdbcTools.release(null, preparedStatement, connection);
+            JdbcUtils.release(null, preparedStatement, connection);
         }
 
     }
@@ -106,7 +105,7 @@ public class JdbcTest {
         Statement stat = null;
         ResultSet resultSet = null;
         try {
-            connection = JdbcTools.getConnection();
+            connection = JdbcUtils.getConnectionByRes();
             stat = connection.createStatement();
             String sql = "select * from examstudent";
             resultSet = stat.executeQuery(sql);
@@ -128,7 +127,7 @@ public class JdbcTest {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        JdbcTools.release(null, stat, connection);
+        JdbcUtils.release(resultSet, null, connection);
 
     }
 
@@ -142,7 +141,7 @@ public class JdbcTest {
         Statement stat = null;
         ResultSet resultSet = null;
         try {
-            connection = JdbcTools.getConnection();
+            connection = JdbcUtils.getConnectionByRes();
             stat = connection.createStatement();
 
             stat.execute(sql);
@@ -150,7 +149,7 @@ public class JdbcTest {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        JdbcTools.release(null, stat, connection);
+        JdbcUtils.release(resultSet, null, connection);
     }
 
 
@@ -164,7 +163,7 @@ public class JdbcTest {
         ResultSet resultSet = null;
         // 1.获取数据库连接
         try {
-            connection = JdbcTools.getConnection();
+            connection = JdbcUtils.getConnectionByRes();
             // 2.调用Connection获取Statement对象
             stat = connection.createStatement();
         } catch (Exception e) {
@@ -188,55 +187,7 @@ public class JdbcTest {
         // 5.2getXxx()方法获取值、
     }
 
-    /**
-     * 获取连接的方法
-     *
-     * @throws Exception
-     */
-    @Test
-    public void testConnection() throws Exception {
-//		Driver driver=new Driver();
 
-
-//		String url="jdbcold:mysql://127.0.0.1:3306/goods";
-//		Properties info =new Properties();
-//		info.put("user","root");
-//		info.put("password", "root");
-//		Connection connection=(Connection) driver.connect(url, info);
-        Connection con = getConnection();
-        Statement stat = con.createStatement();
-        System.out.println(con);
-    }
-
-    /**
-     * 得到连接的方法
-     *
-     * @return
-     * @throws Exception
-     */
-    public Connection getConnection() throws Exception {
-        String driverClass = null;
-        String jdbcUrl = null;
-        String user = null;
-        String password = null;
-
-        Properties pro = new Properties();
-        InputStream in = getClass().getClassLoader().getResourceAsStream("com/demo/servletpath/jdbc.properties");
-        pro.load(in);
-//		driverClass=pro.getProperty("driver");
-        jdbcUrl = pro.getProperty("jdbcUrl");
-        user = pro.getProperty("user");
-        password = pro.getProperty("password");
-
-//		Driver driver=(Driver)Class.forName(driverClass).newInstance();
-        Properties info = new Properties();
-        info.put("user", user);
-        info.put("password", password);
-//		DriverManager.deregisterDriver(driver);
-        Connection con = DriverManager.getConnection(jdbcUrl, info);
-//		 driver.connect(jdbcUrl, info);
-        return con;
-    }
 
 
 }
