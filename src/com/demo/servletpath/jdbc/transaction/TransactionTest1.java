@@ -1,4 +1,4 @@
-package com.demo.servletpath.transaction1;
+package com.demo.servletpath.jdbc.transaction;
 
 import org.junit.Test;
 

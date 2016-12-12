@@ -1,4 +1,4 @@
-package com.demo.servletpath.transaction1;
+package com.demo.servletpath.jdbc.transaction;
 
 import java.sql.*;
 import java.util.ResourceBundle;

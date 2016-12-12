@@ -1,4 +1,4 @@
-package com.demo.servletpath.transaction1;
+package com.demo.servletpath.jdbc.transaction;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
@@ -19,7 +19,7 @@ public class DbcpTest {
      * 手动配置dbcp需要加载dbcp.jar pool.jar
      */
     @Test
-    public void testManual() {
+    public void dbcpManual() {
         BasicDataSource bds = new BasicDataSource();
         //需要设置驱动，用户名 ，密码，
         bds.setDriverClassName("com.mysql.jdbc.Driver");
@@ -45,7 +45,7 @@ public class DbcpTest {
      * 自动获取连接池
      */
     @Test
-    public void testAuto(){
+    public void dbcpAuto(){
         Properties properties=new Properties();
         properties.setProperty("driverClassName","com.mysql.jdbc.Driver");
         properties.setProperty("url","jdbc:mysql://127.0.0.1:3306/day16?characterEncoding=utf8&useSSL=true");

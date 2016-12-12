@@ -1,13 +1,9 @@
-package com.demo.servletpath.transaction1;
+package com.demo.servletpath.jdbc.transaction;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.apache.commons.dbcp2.BasicDataSource;
-import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.junit.Test;
 
 import java.beans.PropertyVetoException;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -48,10 +44,10 @@ public class C3p0Test {
         ResultSet resultSet = null;
         try {
             connection = cpds.getConnection();
-            resultSet = connection.createStatement().executeQuery("select did,dname,sal from dept");
+            resultSet = connection.createStatement().executeQuery("select did,dname from dept");
             while (resultSet.next()) {
-                System.out.println("rs" + resultSet.getInt("did") + "dname" + resultSet.getString("dname")
-                        + "" + "sal=" + resultSet.getString("sal"));
+                System.out.println("rs=" + resultSet.getInt("did") + "dname=" + resultSet.getString("dname")
+                        );
             }
         } catch (SQLException e) {
             e.printStackTrace();

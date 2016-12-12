@@ -286,5 +286,14 @@
         <servlet-name>ServletMvpCheckCode</servlet-name>
         <url-pattern>/ServletMvpCheckCode</url-pattern>
     </servlet-mapping>
+    <!--jdbc transation account-->
+    <servlet>
+        <servlet-name>ServletAccount</servlet-name>
+        <servlet-class>com.demo.servletpath.jdbc.transaction.account.servlet.ServletAccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAccount</servlet-name>
+        <url-pattern>/ServletAccount</url-pattern>
+    </servlet-mapping>
 
 </web-app>
