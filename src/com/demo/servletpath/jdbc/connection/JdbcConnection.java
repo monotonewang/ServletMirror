@@ -52,7 +52,7 @@ public class JdbcConnection {
 	 * @throws Exception
 	 */
 	@Test
-	public   Connection getConnection() throws Exception {
+	public Connection getConnection() throws Exception {
 		String driverClass = null;
 		String jdbcUrl = null;
 		String user = null;
@@ -70,7 +70,7 @@ public class JdbcConnection {
 //		Properties info = new Properties();
 //		info.put("user", user);
 //		info.put("password", password);
-		Connection con = DriverManager.getConnection(jdbcUrl, user,password);
+		Connection con = DriverManager.getConnection(jdbcUrl, user, password);
 //		 driver.connect(jdbcUrl, info);
 		if (con != null) {
 			System.out.print("not null");
@@ -78,7 +78,7 @@ public class JdbcConnection {
 		} else {
 			System.out.print("null");
 			return null;
-	}
+		}
 	}
 
 	/**
