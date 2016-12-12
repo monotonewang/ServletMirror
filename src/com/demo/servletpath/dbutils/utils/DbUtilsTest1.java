@@ -48,9 +48,7 @@ public class DbUtilsTest1 {
 		for (Account a : as) {
 			System.out.println(a);
 		}
-		
 		DbUtils.close(con);
-		
 	}
 
 	// 添加

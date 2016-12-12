@@ -10,8 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-
-
 //介绍ResultSetHandler的九个实现类.
 public class ResultSetHandlerImplTest {
 

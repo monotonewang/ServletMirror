@@ -107,12 +107,12 @@
 
     <!--**************************************DefaultServlet****************************-->
     <!--<servlet>-->
-        <!--<servlet-name>ServletError</servlet-name>-->
-        <!--<servlet-class>com.demo.servletpath.servlet.ServletError</servlet-class>-->
+    <!--<servlet-name>ServletError</servlet-name>-->
+    <!--<servlet-class>com.demo.servletpath.servlet.ServletError</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
-        <!--<servlet-name>ServletError</servlet-name>-->
-        <!--<url-pattern>/</url-pattern>-->
+    <!--<servlet-name>ServletError</servlet-name>-->
+    <!--<url-pattern>/</url-pattern>-->
     <!--</servlet-mapping>-->
     <!--**************************************response****************************-->
     <servlet>
@@ -231,9 +231,9 @@
         <url-pattern>/ServletLoginSession</url-pattern>
     </servlet-mapping>
     <servlet>
-    <servlet-name>ServletSessionId</servlet-name>
-    <servlet-class>com.demo.servletpath.session.ServletSessionId</servlet-class>
-</servlet>
+        <servlet-name>ServletSessionId</servlet-name>
+        <servlet-class>com.demo.servletpath.session.ServletSessionId</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSessionId</servlet-name>
         <url-pattern>/ServletSessionId</url-pattern>
@@ -294,6 +294,15 @@
     <servlet-mapping>
         <servlet-name>ServletAccount</servlet-name>
         <url-pattern>/ServletAccount</url-pattern>
+    </servlet-mapping>
+    <!--Customer-->
+    <servlet>
+        <servlet-name>ServletShowAllCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletShowAllCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletShowAllCustomer</servlet-name>
+        <url-pattern>/ServletShowAllCustomer</url-pattern>
     </servlet-mapping>
 
 </web-app>
