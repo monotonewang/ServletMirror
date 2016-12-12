@@ -1,5 +1,6 @@
 package com.demo.servletpath.jdbc.transaction;
 
+import com.demo.servletpath.jdbc.utils.JdbcUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -10,7 +11,7 @@ import java.sql.Statement;
  * jdbc中事务操作介绍
  * Created by WangTest on 2016/12/10.
  */
-public class TransactionTest1 {
+public class TransactionTest {
     //mysql autocommit 的默认值是true;
     @Test
     public void TranTest1() {

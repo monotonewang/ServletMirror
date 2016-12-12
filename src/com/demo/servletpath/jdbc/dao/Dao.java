@@ -86,7 +86,15 @@ public class Dao {
 		
 		return null;
 	}
-	
+
+	/**
+	 * 查询多条记录
+	 * @param clazz
+	 * @param sql
+	 * @param args
+	 * @param <T>
+	 * @return
+	 */
 	public <T> List<T> getForList(Class<T> clazz,String sql,Object ...args){
 		List <T> list =new ArrayList<>();
 	

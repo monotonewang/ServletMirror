@@ -78,22 +78,7 @@ public class JdbcTest {
 //
 //    }
 //
-//    /**
-//     * 添加新的学生
-//     */
-//    @Test
-//    public void addNewStudent() {
-//        Student student = new Student();
-//        student.setFlowID(1);
-//        student.setType(4);
-//        student.setIdCard("1212121");
-//        student.setExamStudent("2005020202");
-//        student.setStudentName("21212");
-//        student.setLocation("212125555");
-//        student.setGradle(1);
-//        String sql = "insert into examstudent values (" + student.getFlowID() + "," + student.getType() + "," + student.getIdCard() + "," + student.getExamStudent() + "," + student.getStudentName() + "," + student.getLocation() + "," + student.getGradle() + ")";
-//        insert(sql);
-//    }
+
 //
 //    /**
 //     * 得到学生对象
@@ -130,26 +115,6 @@ public class JdbcTest {
 //
 //    }
 
-    /**
-     * 查询sql的方法
-     *
-     * @param sql
-     */
-    public void insert(String sql) {
-        Connection connection = null;
-        Statement stat = null;
-        ResultSet resultSet = null;
-        try {
-            connection = JdbcUtils.getConnectionByRes();
-            stat = connection.createStatement();
-
-            stat.execute(sql);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        JdbcUtils.release(resultSet, null, connection);
-    }
 
 
     /**
@@ -170,13 +135,13 @@ public class JdbcTest {
             e.printStackTrace();
         }
         // 3.准备sql语句
-        String sql = "select * from examstudent";
+        String sql = "select * from dept";
         // 4.发送sql语句获得ResultSet对象
         try {
             resultSet = stat.executeQuery(sql);
-            // 5.1处理及国际。调用next()方法。
+            // 5.1处理结果集。调用next()方法。
             while (resultSet.next()) {
-                String name = resultSet.getString(4);
+                String name = resultSet.getString(3);
                 System.out.println(name);
             }
         } catch (SQLException e) {
@@ -185,8 +150,6 @@ public class JdbcTest {
         }
         // 5.2getXxx()方法获取值、
     }
-
-
 
 
 }
