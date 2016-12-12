@@ -11,6 +11,21 @@
     <title>show Customer</title>
 </head>
 <body>
-
+<table>
+    <form>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </form>
+</table>
 </body>
 </html>
