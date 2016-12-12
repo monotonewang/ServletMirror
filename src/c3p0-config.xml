@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <c3p0-config>
     <default-config>
-        <property name="driverclass">com.mysql.jdbc.Driver</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
         <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/day16?characterEncoding=utf8&amp;useSSL=true&amp;generateSimpleParameterMetadata=true</property>
         <property name="user">root</property>
         <property name="password">root</property>

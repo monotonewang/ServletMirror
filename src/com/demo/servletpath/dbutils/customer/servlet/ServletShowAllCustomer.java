@@ -23,7 +23,7 @@ public class ServletShowAllCustomer extends HttpServlet {
 		try {
 			List<Customer> customerList = customService.showAllCustomer();
 			if (customerList != null) {
-//				System.out.println(customerList);
+				System.out.println(customerList);
 			}else{
 				System.out.println("null");
 			}

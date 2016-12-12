@@ -22,10 +22,10 @@ public class C3p0Test {
             cpds.setPassword("root");
             try {
                 Connection connection = cpds.getConnection();
-                ResultSet resultSet = connection.createStatement().executeQuery("select did,dname,sal from dept");
+                ResultSet resultSet = connection.createStatement().executeQuery("select id,name,money from dept");
                 while (resultSet.next()) {
-                    System.out.println("rs" + resultSet.getInt("did") + "dname" + resultSet.getString("dname")
-                            + "" + "sal=" + resultSet.getString("sal"));
+                    System.out.println("rs" + resultSet.getInt("id") + "name" + resultSet.getString("name")
+                            + "" + "money=" + resultSet.getString("money"));
                 }
                 resultSet.close();
                 connection.close();
@@ -44,9 +44,9 @@ public class C3p0Test {
         ResultSet resultSet = null;
         try {
             connection = cpds.getConnection();
-            resultSet = connection.createStatement().executeQuery("select did,dname from dept");
+            resultSet = connection.createStatement().executeQuery("select id,name from dept");
             while (resultSet.next()) {
-                System.out.println("rs=" + resultSet.getInt("did") + "dname=" + resultSet.getString("dname")
+                System.out.println("rs=" + resultSet.getInt("id") + "dname=" + resultSet.getString("name")
                         );
             }
         } catch (SQLException e) {
