@@ -13,20 +13,21 @@ import javax.xml.transform.stream.StreamResult;
 
 /**
  * 作业
- * @author Administrator
  *
+ * @author Administrator
  */
 public class JaxpDomTest2 {
 
 	public static void main(String[] args) throws Exception {
 		run1();
 	}
-	
+
 	/**
 	 * 获取第一本书的属性值
+	 *
 	 * @throws Exception
 	 */
-	public static void run2() throws Exception{
+	public static void run2() throws Exception {
 		// 获取工厂
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		// 解析器
@@ -39,12 +40,13 @@ public class JaxpDomTest2 {
 		Element book = (Element) book1;
 		System.out.println(book.getAttribute("编号"));
 	}
-	
+
 	/**
 	 * 在作者标签之前，添加团购价标签
-	 * @throws Exception 
+	 *
+	 * @throws Exception
 	 */
-	public static void run1() throws Exception{
+	public static void run1() throws Exception {
 		// 获取工厂
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		// 解析器
