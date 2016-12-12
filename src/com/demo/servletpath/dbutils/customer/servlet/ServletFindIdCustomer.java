@@ -19,7 +19,7 @@ public class ServletFindIdCustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		CustomService customService=new CustomService();
 		try {
-			Customer customer = customService.findCustomerById("a12");
+			Customer customer = customService.findCustomerById("3");
 			if(customer!=null){
 //				System.out.println(customer);
 			}else{
