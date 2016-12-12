@@ -304,5 +304,29 @@
         <servlet-name>ServletShowAllCustomer</servlet-name>
         <url-pattern>/ServletShowAllCustomer</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFindIdCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletFindIdCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFindIdCustomer</servlet-name>
+        <url-pattern>/ServletFindIdCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletDelByIdCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletDelByIdCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDelByIdCustomer</servlet-name>
+        <url-pattern>/ServletDelByIdCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletUpdateCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletUpdateCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateCustomer</servlet-name>
+        <url-pattern>/ServletUpdateCustomer</url-pattern>
+    </servlet-mapping>
 
 </web-app>

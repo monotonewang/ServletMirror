@@ -10,20 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  * Created by 7 on 2016/12/12.
  */
-@WebServlet(name = "ServletShowAllCustomer")
-public class ServletShowAllCustomer extends HttpServlet {
+@WebServlet(name = "ServletFindIdCustomer")
+public class ServletFindIdCustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
-		CustomService customService = new CustomService();
+		CustomService customService=new CustomService();
 		try {
-			List<Customer> customerList = customService.showAllCustomer();
-			if (customerList != null) {
-//				System.out.println(customerList);
+			Customer customer = customService.findCustomerById("a12");
+			if(customer!=null){
+//				System.out.println(customer);
 			}else{
 				System.out.println("null");
 			}
