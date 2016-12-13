@@ -1,4 +1,4 @@
-package com.demo.servletpath.linstener;
+package com.demo.servletpath.listener;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
