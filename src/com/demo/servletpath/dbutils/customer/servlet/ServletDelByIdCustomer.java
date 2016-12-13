@@ -16,11 +16,15 @@ import java.sql.SQLException;
 @WebServlet(name = "ServletDelByIdCustomer")
 public class ServletDelByIdCustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
 		CustomService customService = new CustomService();
+		String id = request.getParameter("id");
 		try {
-			int a12 = customService.delCustomerById("a12");
-			if (a12 == 1) {
-//				System.out.println("success");
+			int res = customService.delCustomerById(id);
+			if (res == 1) {
+				System.out.println(request.getContextPath());//--/ServletMirror
+				//重定向
+				response.sendRedirect(request.getContextPath()+"/ServletShowAllCustomer");
 			} else {
 				System.out.println("failed");
 			}

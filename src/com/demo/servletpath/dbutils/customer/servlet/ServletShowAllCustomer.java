@@ -25,7 +25,7 @@ public class ServletShowAllCustomer extends HttpServlet {
 			if (customerList != null) {
 				request.setAttribute("cs",customerList);
 				request.getRequestDispatcher("/jsp/dbutils/showCustomer.jsp").forward(request,response);
-				System.out.println(customerList);
+//				System.out.println(customerList);
 			}else{
 				response.getWriter().write("failed");
 			}

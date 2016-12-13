@@ -48,7 +48,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		String sql = "delete from customer where id=?";
 		QueryRunner queryRunner = new QueryRunner(DataSourceUtils.getDataSource());
 		int res = queryRunner.update(sql, id);
-		System.out.println("CustomerDaoImpl" + res);
+//		System.out.println("CustomerDaoImpl" + res);
 		return res;
 	}
 

@@ -44,3 +44,10 @@ INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888'
 INSERT INTO `customer` VALUES (null, 'tom', '男', '2010-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
 INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
 INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');
+INSERT INTO `customer` VALUES (null, 'james', '男', '1990-10-10', '13888888888', 'tom@163.com', '吃,喝,玩', 'vip', 'good man');

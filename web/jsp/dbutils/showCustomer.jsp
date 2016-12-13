@@ -43,7 +43,9 @@
             <td>${c.type}</td>
             <td>${c.preference}</td>
             <td>${c.description}</td>
-            <td><a>编辑</a>&nbsp;<a>删除</a></td>
+            <%--<td><a>编辑</a>&nbsp;<a href="${pageContext.request.contextPath}/ServletDelByIdCustomer?id=${c.id}">删除</a></td>--%>
+            <td><a href="${pageContext.request.contextPath}/ServletFindIdCustomer?id=${c.id}">编辑</a>
+                &nbsp;<a href="javascript:void(0)" onclick="del('${c.id}')">删除</a></td>
 
         </tr>
     </c:forEach>
@@ -52,4 +54,13 @@
 
 </table>
 </body>
+<script type="text/javascript">
+    function del(id) {
+        var flag=window.confirm("confirm del id"+id);
+        if(flag){
+            //确认删除
+            location.href="${pageContext.request.contextPath}/ServletDelByIdCustomer?id="+id;
+        }
+    }
+</script>
 </html>

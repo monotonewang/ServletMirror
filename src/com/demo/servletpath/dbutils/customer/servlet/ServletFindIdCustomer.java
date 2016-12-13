@@ -17,10 +17,16 @@ import java.sql.SQLException;
 @WebServlet(name = "ServletFindIdCustomer")
 public class ServletFindIdCustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		String id = request.getParameter("id");
+//		System.out.println("ServletFindIdCustomer--id="+id);
 		CustomService customService=new CustomService();
 		try {
-			Customer customer = customService.findCustomerById("3");
+			Customer customer = customService.findCustomerById(id);
 			if(customer!=null){
+				//转发
+				request.setAttribute("cs",customer);
+				request.getRequestDispatcher("/jsp/dbutils/customerInfo.jsp").forward(request,response);
 //				System.out.println(customer);
 			}else{
 				System.out.println("null");
