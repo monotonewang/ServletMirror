@@ -27,35 +27,29 @@ public class ServletUpdateCustomer extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		Map<String, String[]> parameterMap = request.getParameterMap();
+		Customer customer = new Customer();
+		DateConverter dc = new DateConverter(); // 这是一个日期类型转换器.
+		dc.setPattern("yyyy-MM-dd");
 		try {
-			Customer customer = new Customer();
-			DateConverter dc = new DateConverter(); // 这是一个日期类型转换器.
-			dc.setPattern("yyyy-MM-dd");
+			ConvertUtils.register(dc, java.util.Date.class);
+			BeanUtils.populate(customer, parameterMap);
+			System.out.print("ServletUpdateCustomer="+customer);
+			CustomService customService = new CustomService();
 			try {
-				ConvertUtils.register(dc, java.util.Date.class);
-				BeanUtils.populate(customer, parameterMap);
-				System.out.print("ServletUpdateCustomer="+customer);
-				CustomService customService = new CustomService();
-				try {
-					int res = customService.updateCustomer(customer);
-					if (res == 1) {//success
-						//转发
-						request.setAttribute("cs", customer);
-						response.sendRedirect(request.getContextPath() +"/ServletShowAllCustomer");
+				int res = customService.updateCustomer(customer);
+				if (res == 1) {//success
+					//转发
+					request.setAttribute("cs", customer);
+					response.sendRedirect(request.getContextPath() +"/ServletShowAllCustomer");
 //						request.getRequestDispatcher(request.getContextPath() + "/ServletShowAllCustomer").forward(request, response);
-					} else {//failed
-						System.out.println("update failed");
-					}
-				} catch (SQLException e) {
-					e.printStackTrace();
+				} else {//failed
+					System.out.println("update failed");
 				}
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
-			} catch (InvocationTargetException e) {
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		} finally {
-
+		} catch (IllegalAccessException | InvocationTargetException e) {
+			e.printStackTrace();
 		}
 	}
 

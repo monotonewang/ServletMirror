@@ -20,15 +20,15 @@ public class ServletFindIdCustomer extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		String id = request.getParameter("id");
 //		System.out.println("ServletFindIdCustomer--id="+id);
-		CustomService customService=new CustomService();
+		CustomService customService = new CustomService();
 		try {
 			Customer customer = customService.findCustomerById(id);
-			if(customer!=null){
+			if (customer != null) {
 				//转发
-				request.setAttribute("cs",customer);
-				request.getRequestDispatcher("/jsp/dbutils/customerInfo.jsp").forward(request,response);
+				request.setAttribute("cs", customer);
+				request.getRequestDispatcher("/jsp/dbutils/customerInfo.jsp").forward(request, response);
 //				System.out.println(customer);
-			}else{
+			} else {
 				System.out.println("null");
 			}
 		} catch (SQLException e) {
@@ -37,6 +37,6 @@ public class ServletFindIdCustomer extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request,response);
+		doPost(request, response);
 	}
 }
