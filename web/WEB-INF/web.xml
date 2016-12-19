@@ -336,6 +336,15 @@
         <servlet-name>ServletDelSelectCustomer</servlet-name>
         <url-pattern>/ServletDelSelectCustomer</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletSimpleSelectCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletSimpleSelectCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSimpleSelectCustomer</servlet-name>
+        <url-pattern>/ServletSimpleSelectCustomer</url-pattern>
+    </servlet-mapping>
+
 
     <!--过滤器-->
     <filter>

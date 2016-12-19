@@ -17,10 +17,22 @@
     无客户info
 </c:if>
 <c:if test="${not empty cs}">
+    <div align="center">
+        <form action="${pageContext.request.contextPath}/ServletSimpleSelectCustomer" method="post">
+            <select name="field">
+                <option>请选择条件</option>
+                <option value="name">按姓名查询</option>
+                <option value="cellphone">按手机号查询</option>
+                <option value="description">按描述查询</option>
+            </select>
+            <input type="text" name="msg">
+            <input type="submit" value="查询">
+        </form>
+    </div>
     <form action="${pageContext.request.contextPath}/ServletDelSelectCustomer" method="post" id="f">
         <table border="1" align="center" width="70%">
             <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" id="main" onclick="change()"></td>
                 <td>客户编号</td>
                 <td>客户姓名</td>
                 <td>客户性别</td>
@@ -80,6 +92,20 @@
             }
         }
     }
+    //全选操作
+    function change(){
+        //1.得到id为main的这个checkbox
+        var main=document.getElementById("main");
 
+        var flag=main.checked;
+
+        //2.得到所有name=ck的checkbox
+        var cks=document.getElementsByName("ck");
+
+        //3.将cks中所有的checkbox的checked值设置为flag
+        for(var i=0;i<cks.length;i++){
+            cks[i].checked=flag;
+        }
+    }
 </script>
 </html>

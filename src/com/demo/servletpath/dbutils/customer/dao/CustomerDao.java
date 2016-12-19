@@ -24,4 +24,6 @@ public interface CustomerDao {
 	int updateCustomer(Customer customer) throws SQLException;
 
 	int[] delSelect(String[] id) throws SQLException;
+
+	List<Customer> simpleSelect(String field, String msg) throws SQLException;
 }

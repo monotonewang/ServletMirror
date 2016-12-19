@@ -31,4 +31,8 @@ public class CustomService {
 	public int[] delSelect(String[] id) throws SQLException {
 		return customerDao.delSelect(id);
 	}
+
+	public List<Customer> simpleSelect(String field, String msg) throws SQLException {
+		return customerDao.simpleSelect(field, msg);
+	}
 }

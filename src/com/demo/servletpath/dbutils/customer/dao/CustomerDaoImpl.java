@@ -81,4 +81,15 @@ public class CustomerDaoImpl implements CustomerDao {
 		int[] batch = runner.batch(sql, ids);
 		return batch;
 	}
+
+	@Override
+	public List<Customer> simpleSelect(String field, String msg) throws SQLException {
+		String sql = "select * from customer where " + field + " like ?";
+
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+
+		return runner.query(sql, new BeanListHandler<Customer>(Customer.class),
+				"%" + msg + "%");
+
+	}
 }
