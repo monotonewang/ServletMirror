@@ -12,7 +12,7 @@
 </head>
 <body>
 ${requestScope["add.message"]}<br>
-<form action="${pageContext.request.contextPath}/add" method="post">
+<form action="${pageContext.request.contextPath}/ServletAddCustomer" method="post">
     客户姓名:<input type="text" name="name"><br>
     客户性别:<input type="radio" name="gender" value="男" checked="checked">男<input type="radio" name="gender" value="女">女
     <br>

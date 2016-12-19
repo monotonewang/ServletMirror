@@ -64,7 +64,7 @@
             </c:forEach>
             <tr>
                 <td colspan="10"><a href="javascript:void(0)" onclick="sendDel();">删除选中</a></td>
-                <td><a href="${pageContext.request.contextPath}/add.jsp">添加</a>
+                <td><a href="${pageContext.request.contextPath}/jsp/dbutils/addCustomer.jsp">添加</a>
                 </td>
             </tr>
         </table>

@@ -344,6 +344,14 @@
         <servlet-name>ServletSimpleSelectCustomer</servlet-name>
         <url-pattern>/ServletSimpleSelectCustomer</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletAddCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletAddCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAddCustomer</servlet-name>
+        <url-pattern>/ServletAddCustomer</url-pattern>
+    </servlet-mapping>
 
 
     <!--过滤器-->

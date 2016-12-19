@@ -92,4 +92,14 @@ public class CustomerDaoImpl implements CustomerDao {
 				"%" + msg + "%");
 
 	}
+
+	@Override
+	public int addCustomer(Customer c) throws SQLException {
+		String sql = "insert into customer values(?,?,?,?,?,?,?,?,?)";
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+
+		return runner.update(sql, null, c.getName(), c.getGender(),
+				c.getBirthday(), c.getCellphone(), c.getEmail(),
+				c.getPreference(), c.getType(), c.getDescription());
+	}
 }

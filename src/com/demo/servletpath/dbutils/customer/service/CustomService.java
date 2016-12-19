@@ -35,4 +35,8 @@ public class CustomService {
 	public List<Customer> simpleSelect(String field, String msg) throws SQLException {
 		return customerDao.simpleSelect(field, msg);
 	}
+
+	public int addCustomer(Customer customer) throws SQLException {
+		return customerDao.addCustomer(customer);
+	}
 }
