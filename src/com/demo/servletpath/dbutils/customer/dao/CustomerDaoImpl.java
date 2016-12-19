@@ -1,10 +1,12 @@
 package com.demo.servletpath.dbutils.customer.dao;
 
 import com.demo.servletpath.dbutils.customer.domain.Customer;
+import com.demo.servletpath.dbutils.customer.domain.PageBean;
 import com.demo.servletpath.dbutils.customer.utils.DataSourceUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -101,5 +103,21 @@ public class CustomerDaoImpl implements CustomerDao {
 		return runner.update(sql, null, c.getName(), c.getGender(),
 				c.getBirthday(), c.getCellphone(), c.getEmail(),
 				c.getPreference(), c.getType(), c.getDescription());
+	}
+
+	@Override
+	public List<Customer> findByPage(int pageNum, int currentPage) throws SQLException {
+		String sql = "select * from customer limit ?,?";
+		QueryRunner queryRunner = new QueryRunner(DataSourceUtils.getDataSource());
+		List<Customer> customerList = queryRunner.query(sql, new BeanListHandler<Customer>(Customer.class),(pageNum-1)*currentPage,currentPage);
+//		System.out.println("CustomerDaoImpl"+customerList);
+		return customerList;
+	}
+
+	public int findAllCount() throws SQLException {
+		String sql="select count(*) from customer";
+		QueryRunner queryRunner=new QueryRunner(DataSourceUtils.getDataSource());
+		long query = (long) queryRunner.query(sql, new ScalarHandler());
+		return (int) query;
 	}
 }

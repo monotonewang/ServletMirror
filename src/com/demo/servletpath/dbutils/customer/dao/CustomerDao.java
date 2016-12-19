@@ -28,4 +28,6 @@ public interface CustomerDao {
 	List<Customer> simpleSelect(String field, String msg) throws SQLException;
 
 	int addCustomer(Customer customer) throws SQLException;
+
+    List<Customer> findByPage(int pageNum, int currentPage) throws SQLException;
 }

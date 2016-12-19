@@ -352,6 +352,14 @@
         <servlet-name>ServletAddCustomer</servlet-name>
         <url-pattern>/ServletAddCustomer</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFindByPage</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletFindByPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFindByPage</servlet-name>
+        <url-pattern>/ServletFindByPage</url-pattern>
+    </servlet-mapping>
 
 
     <!--过滤器-->

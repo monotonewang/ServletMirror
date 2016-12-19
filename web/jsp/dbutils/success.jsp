@@ -11,6 +11,7 @@
     <title>success</title>
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/ServletShowAllCustomer">查找所有客户</a>
+    <a href="${pageContext.request.contextPath}/ServletShowAllCustomer">查找所有客户</a><br/>
+    <a href="${pageContext.request.contextPath}/ServletFindByPage">查找分页客户</a>
 </body>
 </html>
