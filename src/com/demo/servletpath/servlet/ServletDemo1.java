@@ -10,6 +10,7 @@ import java.io.IOException;
  */
 public class ServletDemo1 implements Servlet {
     Dao dao = new Dao();
+    private String string="hello demo1";
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
@@ -22,7 +23,7 @@ public class ServletDemo1 implements Servlet {
     }
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        servletResponse.getWriter().write("hello demo1....");
+        servletResponse.getWriter().write(string);
 //        dao.getForList()
 
 

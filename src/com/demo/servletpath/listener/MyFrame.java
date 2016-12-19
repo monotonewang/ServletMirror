@@ -6,6 +6,10 @@ import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame {
 
+	public static void main(String[] args) {
+		new MyFrame();
+	}
+
 	private JButton but = new JButton("按钮"); // 事件源
 
 	// 事件:but被按下就是一个事件。 ActionEvent 对于ActionEvent事件的监听器就是ActionListener.
@@ -20,9 +24,6 @@ public class MyFrame extends JFrame {
 		this.setVisible(true);
 	}
 
-	public static void main(String[] args) {
-		new MyFrame();
-	}
 }
 
 // 监听器

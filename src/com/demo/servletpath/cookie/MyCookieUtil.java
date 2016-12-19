@@ -11,9 +11,9 @@ public class MyCookieUtil {
 	
 	/**
 	 * 通过指定名称查找指定的cookie
-	 * @param cookies
-	 * @param name
-	 * @return
+	 * @param cookies cookies
+	 * @param name cookies name
+	 * @return null
 	 */
 	public static Cookie getCookieByName(Cookie [] cookies,String name){
 		// 如果数组是null
