@@ -23,4 +23,5 @@ public interface CustomerDao {
 	//更新用户
 	int updateCustomer(Customer customer) throws SQLException;
 
+	int[] delSelect(String[] id) throws SQLException;
 }

@@ -20,7 +20,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		String sql = "insert into customer values(id,name,gender,birthday,cellphone,email," +
 				"preference,type,description) values (?,?,?,?,?,?,?,?,?)";
 		QueryRunner queryRunner = new QueryRunner(DataSourceUtils.getDataSource());
-		Date date=c.getBirthday();
+		Date date = c.getBirthday();
 //		queryRunner.insert(sql,c.getId(),c.getName(),c.getGender(),c.getBirthday(),c.getCellphone(),c.getEmail(),c.getPreference(),c.getType(),c.getDescription())
 		return 0;
 	}
@@ -61,5 +61,24 @@ public class CustomerDaoImpl implements CustomerDao {
 				c.getBirthday(), c.getCellphone(), c.getEmail(), c.getPreference(),
 				c.getType(), c.getDescription(), c.getId());
 		return res;
+	}
+
+	/**
+	 * 删除数组Id
+	 *
+	 * @param id
+	 */
+	@Override
+	public int[] delSelect(String[] id) throws SQLException {
+		String sql = "delete from customer where id=?";
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		Object[][] ids = new Object[id.length][1];
+
+		for (int i = 0; i < id.length; i++) {
+			ids[i][0] = id[i];
+		}
+
+		int[] batch = runner.batch(sql, ids);
+		return batch;
 	}
 }

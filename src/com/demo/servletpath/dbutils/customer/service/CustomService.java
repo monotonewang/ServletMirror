@@ -27,4 +27,8 @@ public class CustomService {
 	public int updateCustomer(Customer customer) throws SQLException {
 		return customerDao.updateCustomer(customer);
 	}
+
+	public int[] delSelect(String[] id) throws SQLException {
+		return customerDao.delSelect(id);
+	}
 }

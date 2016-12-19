@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/js/dbutils/My97DatePicker/WdatePicker.js"></script>
 <html>
 <head>
     <title>update user Info</title>
@@ -35,7 +36,7 @@
 
         <tr>
             <td>userBrithday</td>
-            <td><input type="text" name="birthday" value="${cs.birthday}"></td>
+            <td><input type="text" name="birthday" class="Wdate" onclick="WdatePicker()" value="${cs.birthday}" readonly="readonly"></td>
         </tr>
         <tr>
             <td>userCellPhone</td>

@@ -17,50 +17,69 @@
     无客户info
 </c:if>
 <c:if test="${not empty cs}">
-<table border="1" align="center" width="70%">
-    <tr>
-        <td><input type="checkbox"></td>
-        <td>客户编号</td>
-        <td>客户姓名</td>
-        <td>客户性别</td>
-        <td>客户生日</td>
-        <td>客户邮箱</td>
-        <td>客户电话</td>
-        <td>客户爱好</td>
-        <td>客户类型</td>
-        <td>客户备注</td>
-        <td>操作</td>
-    </tr>
-    <c:forEach items="${cs}" var="c">
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>${c.id}</td>
-            <td>${c.name}</td>
-            <td>${c.gender}</td>
-            <td>${c.birthday}</td>
-            <td>${c.email}</td>
-            <td>${c.cellphone}</td>
-            <td>${c.type}</td>
-            <td>${c.preference}</td>
-            <td>${c.description}</td>
-            <%--<td><a>编辑</a>&nbsp;<a href="${pageContext.request.contextPath}/ServletDelByIdCustomer?id=${c.id}">删除</a></td>--%>
-            <td><a href="${pageContext.request.contextPath}/ServletFindIdCustomer?id=${c.id}">编辑</a>
-                &nbsp;<a href="javascript:void(0)" onclick="del('${c.id}')">删除</a></td>
+    <form action="${pageContext.request.contextPath}/ServletDelSelectCustomer" method="post" id="f">
+        <table border="1" align="center" width="70%">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>客户编号</td>
+                <td>客户姓名</td>
+                <td>客户性别</td>
+                <td>客户生日</td>
+                <td>客户邮箱</td>
+                <td>客户电话</td>
+                <td>客户爱好</td>
+                <td>客户类型</td>
+                <td>客户备注</td>
+                <td>操作</td>
+            </tr>
+            <c:forEach items="${cs}" var="c">
+                <tr>
+                    <td><input type="checkbox" value="${c.id}" name="ck"></td>
+                    <td>${c.id}</td>
+                    <td>${c.name}</td>
+                    <td>${c.gender}</td>
+                    <td>${c.birthday}</td>
+                    <td>${c.email}</td>
+                    <td>${c.cellphone}</td>
+                    <td>${c.type}</td>
+                    <td>${c.preference}</td>
+                    <td>${c.description}</td>
+                        <%--<td><a>编辑</a>&nbsp;<a href="${pageContext.request.contextPath}/ServletDelByIdCustomer?id=${c.id}">删除</a></td>--%>
+                    <td><a href="${pageContext.request.contextPath}/ServletFindIdCustomer?id=${c.id}">编辑</a>
+                        &nbsp;<a href="javascript:void(0)" onclick="del('${c.id}')">删除</a></td>
 
-        </tr>
-    </c:forEach>
-
-    </c:if>
-
-</table>
+                </tr>
+            </c:forEach>
+            <tr>
+                <td colspan="10"><a href="javascript:void(0)" onclick="sendDel();">删除选中</a></td>
+                <td><a href="${pageContext.request.contextPath}/add.jsp">添加</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</c:if>
 </body>
 <script type="text/javascript">
     function del(id) {
-        var flag=window.confirm("confirm del id"+id);
-        if(flag){
+        var flag = window.confirm("confirm del id" + id);
+        if (flag) {
             //确认删除
-            location.href="${pageContext.request.contextPath}/ServletDelByIdCustomer?id="+id;
+            location.href = "${pageContext.request.contextPath}/ServletDelByIdCustomer?id=" + id;
         }
     }
+    function sendDel() {
+        document.getElementById("f").submit();//表单提交
+
+        var cks = document.getElementsByName("ck");
+
+        var url = "${pageContext.request.contextPath}/ServletDelSelectCustomer?";
+        for (var i = 0; i < cks.length; i++) {
+            if (cks[i].checked) {
+                var id = cks[i].value;
+                url += "id=" + id + "&";
+            }
+        }
+    }
+
 </script>
 </html>

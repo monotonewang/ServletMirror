@@ -328,6 +328,15 @@
         <servlet-name>ServletUpdateCustomer</servlet-name>
         <url-pattern>/ServletUpdateCustomer</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletDelSelectCustomer</servlet-name>
+        <servlet-class>com.demo.servletpath.dbutils.customer.servlet.ServletDelSelectCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDelSelectCustomer</servlet-name>
+        <url-pattern>/ServletDelSelectCustomer</url-pattern>
+    </servlet-mapping>
+
     <!--过滤器-->
     <filter>
         <filter-name>MyFilter</filter-name>
