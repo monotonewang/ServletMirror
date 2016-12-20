@@ -32,7 +32,7 @@ public class ServletDownLoad extends HttpServlet {
 
         // 判断是什么浏览器	Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
         // Mozilla/5.0 (Windows NT 6.1; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0
-        String agent = request.getHeader("User-Agent");
+        String agent = request.getHeader("ListenerUser-Agent");
         // System.out.println(agent);
         if(agent.contains("MSIE")){
             filename = URLEncoder.encode(filename,"UTF-8");

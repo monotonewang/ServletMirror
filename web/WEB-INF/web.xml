@@ -404,6 +404,17 @@
         <url-pattern>/ServletFileDownLoad</url-pattern>
     </servlet-mapping>
 
+
+    <!-- 注册监听ServletContext对象创建与销毁 -->
+    <listener>
+        <listener-class>com.demo.servletpath.listener.application.ListenerServletContextDemo</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.demo.servletpath.listener.request.ListenerRequestDemo</listener-class>
+    </listener>
+
+
     <!--过滤器-->
     <filter>
         <filter-name>MyFilter</filter-name>

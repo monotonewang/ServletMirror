@@ -32,7 +32,7 @@ public class ServletJspELUser extends HttpServlet {
          String username = request.getParameter("username");
          String password = request.getParameter("password");
          // 创建User对象，set设置值
-         User user = new User();
+         ListenerUser user = new ListenerUser();
          user.setUsername(username);
          user.setPassword(password);
          */

@@ -1,6 +1,6 @@
 <%@ page import="com.demo.servletpath.jspel.bean.User" %><%--
   Created by IntelliJ IDEA.
-  User: 7
+  ListenerUser: 7
   Date: 2016/12/6
   Time: 17:19
   To change this template use File | Settings | File Templates.
@@ -17,7 +17,7 @@
     <%--String username = request.getParameter("username");--%>
     <%--String password = request.getParameter("password");--%>
     <%--// 创建User对象，set设置值--%>
-    <%--User user = new User();--%>
+    <%--ListenerUser user = new ListenerUser();--%>
     <%--user.setUsername(username);--%>
     <%--user.setPassword(password);--%>
 <%--%>--%>
