@@ -37,7 +37,8 @@
     <servlet>
         <servlet-name>ServletDemo5</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletDemo5</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--start with server-->
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletDemo5</servlet-name>
@@ -62,7 +63,7 @@
     <servlet>
         <servlet-name>ServletDemo7</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletDemo7</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletDemo7</servlet-name>
@@ -71,7 +72,7 @@
     <servlet>
         <servlet-name>ServletCount</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletCount</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletCount</servlet-name>
@@ -80,7 +81,7 @@
     <servlet>
         <servlet-name>ServletRead</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletRead</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletRead</servlet-name>
@@ -89,7 +90,7 @@
     <servlet>
         <servlet-name>ServletReponseHeader</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletReponseHeader</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletReponseHeader</servlet-name>
@@ -98,7 +99,7 @@
     <servlet>
         <servlet-name>ServletRefresh</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletRefresh</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletRefresh</servlet-name>
@@ -118,7 +119,7 @@
     <servlet>
         <servlet-name>ServletLogin</servlet-name>
         <servlet-class>com.demo.servletpath.response.ServletLogin</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletLogin</servlet-name>
