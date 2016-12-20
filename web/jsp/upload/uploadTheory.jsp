@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<!--文件上传form-->
 <form action="${pageContext.request.contextPath}/ServletUpLoadTheory" method="post" encType="multipart/form-data">
     <input type="text" name="content"><br>
     <input type="file" name="f"><br>
