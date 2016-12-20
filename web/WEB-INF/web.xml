@@ -18,6 +18,47 @@
         <param-name>encoding</param-name>
         <param-value>UTF-8</param-value>
     </context-param>
+
+    <!--过滤器-->
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.demo.servletpath.filter.MyFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>tom</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+    <!-- 注册监听ServletContext对象创建与销毁 -->
+    <!--application-->
+    <listener>
+        <listener-class>com.demo.servletpath.listener.application.ListenerServletContextDemo</listener-class>
+    </listener>
+    <!--request-->
+    <listener>
+        <listener-class>com.demo.servletpath.listener.request.ListenerRequestDemo</listener-class>
+    </listener>
+    <!--session-->
+    <listener>
+        <listener-class>com.demo.servletpath.listener.session.ListenerSession</listener-class>
+    </listener>
+    <!--must put before MyHttpSessionListener -->
+    <listener>
+        <listener-class>com.demo.servletpath.listener.session.MyServletContextListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>com.demo.servletpath.listener.session.MyHttpSessionListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>ServletDemo1</servlet-name>
         <servlet-class>com.demo.servletpath.servlet.ServletDemo1</servlet-class>
@@ -405,35 +446,4 @@
     </servlet-mapping>
 
 
-    <!-- 注册监听ServletContext对象创建与销毁 -->
-    <!--application-->
-    <listener>
-        <listener-class>com.demo.servletpath.listener.application.ListenerServletContextDemo</listener-class>
-    </listener>
-    <!--request-->
-    <listener>
-        <listener-class>com.demo.servletpath.listener.request.ListenerRequestDemo</listener-class>
-    </listener>
-    <!--session-->
-    <listener>
-        <listener-class>com.demo.servletpath.listener.session.ListenerSession</listener-class>
-    </listener>
-
-    <!--过滤器-->
-    <filter>
-        <filter-name>MyFilter</filter-name>
-        <filter-class>com.demo.servletpath.filter.MyFilter</filter-class>
-        <init-param>
-            <param-name>encoding</param-name>
-            <param-value>utf-8</param-value>
-        </init-param>
-        <init-param>
-            <param-name>username</param-name>
-            <param-value>tom</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>MyFilter</filter-name>
-        <url-pattern>/index.jsp</url-pattern>
-    </filter-mapping>
 </web-app>

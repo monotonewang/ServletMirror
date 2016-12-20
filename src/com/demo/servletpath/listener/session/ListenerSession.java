@@ -21,12 +21,12 @@ public class ListenerSession implements
 	// -------------------------------------------------------
 	public void sessionCreated(HttpSessionEvent se) {
       /* Session is created. */
-		System.out.println("session对象创建了");
+//		System.out.println("session对象创建了");
 	}
 
 	public void sessionDestroyed(HttpSessionEvent se) {
       /* Session is destroyed. */
-		System.out.println("session对象销毁了");
+//		System.out.println("session对象销毁了");
 	}
 
 	// -------------------------------------------------------
@@ -37,12 +37,16 @@ public class ListenerSession implements
       /* This method is called when an attribute 
          is added to a session.
       */
+        String sname = (String) sbe.getSession().getAttribute(sbe.getName());
+//        System.out.println("sname="+sname);
+//        System.out.println("session属性创建了");
 	}
 
 	public void attributeRemoved(HttpSessionBindingEvent sbe) {
       /* This method is called when an attribute
          is removed from a session.
       */
+//		System.out.println("session属性销毁了");
 	}
 
 	public void attributeReplaced(HttpSessionBindingEvent sbe) {
