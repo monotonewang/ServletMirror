@@ -28,14 +28,16 @@ public class MyFilter implements Filter {
 	}
 
 	public void init(FilterConfig config) throws ServletException {
+		//获取Filter 名称
 		String filterName = config.getFilterName();
 //		System.out.println("filterName"+filterName);
+		//获取初始化参数
 		String encoding = config.getInitParameter("encoding");
 //		System.out.println("encoding"+encoding);
 		String username = config.getInitParameter("username");
 //		System.out.println("username"+username);
 		//get servletContext
-
+		//获取全局对象
 		servletContext = config.getServletContext();
 
 	}
