@@ -622,14 +622,14 @@ F.module("nav:nav/nav_msg", function (c, f, i) {
                                 id: C,
                                 arrowPosLeft: 91,
                                 widthoutYahei: true,
-                                arrowType: "down",
+                                arrowType: "download",
                                 width: 180,
                                 pos: {left: N, top: P},
                                 hasClose: true,
                                 content: '绑定已过期，将无法获取最新消息提醒，点击<a id="s_msgbox_rebind_weibo_tip" href="#" style="color: #0360AF;" onclick="return false;">重新绑定</a>'
                             });
                             e.insertHTML(K, "beforeEnd", U);
-                            var W = e.g(C), S = e.q("guide-tip-arrow-down", W)[0];
+                            var W = e.g(C), S = e.q("guide-tip-arrow-download", W)[0];
                             e.setStyle(W, "zIndex", 201);
                             if (e.isIE6) {
                                 e.setStyles(S, {bottom: "0px", zoom: 1})

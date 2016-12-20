@@ -363,7 +363,7 @@
     <!--文件上传-->
     <servlet>
         <servlet-name>ServletUpLoadTheory</servlet-name>
-        <servlet-class>com.demo.servletpath.upload.ServletUpLoadTheory</servlet-class>
+        <servlet-class>com.demo.servletpath.upload.web.servlet.ServletUpLoadTheory</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletUpLoadTheory</servlet-name>
@@ -371,11 +371,36 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletUploadByUtil</servlet-name>
-        <servlet-class>com.demo.servletpath.upload.ServletUploadByUtil</servlet-class>
+        <servlet-class>com.demo.servletpath.upload.web.servlet.ServletUploadByUtil</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletUploadByUtil</servlet-name>
         <url-pattern>/ServletUploadByUtil</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletUploadMessycode</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.web.servlet.ServletUploadMessycode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUploadMessycode</servlet-name>
+        <url-pattern>/ServletUploadMessycode</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletUploadFilename</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.web.servlet.ServletUploadFilename</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUploadFilename</servlet-name>
+        <url-pattern>/ServletUploadFilename</url-pattern>
+    </servlet-mapping>
+    <!--文件下载-->
+    <servlet>
+        <servlet-name>ServletFileDownLoad</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.download.ServletFileDownLoad</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFileDownLoad</servlet-name>
+        <url-pattern>/ServletFileDownLoad</url-pattern>
     </servlet-mapping>
 
     <!--过滤器-->
