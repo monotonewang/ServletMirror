@@ -13,57 +13,59 @@ import java.io.IOException;
  */
 @WebServlet(name = "ServletProductCookie")
 public class ServletProductCookie extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
-    private String cookieName="product";
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        //1.获取请求参数
-        //2.获取cookie数组
-        //3.如果cookie为null.那就是第一次访问创建cookie
-        //4.判断cookie不是为null,
-        //  如果为空，不用处理
-        //如果不为空，追加上去
-        //5.重定向到商品页面
-        String id = request.getParameter("id");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
 
-        Cookie[] cookies = request.getCookies();
-        Cookie cookieByName = MyCookieUtil.getCookieByName(cookies,cookieName);
-        if (cookieByName == null) {
-            Cookie cookie = new Cookie(cookieName, "");
-            cookie.setMaxAge(7 * 24 * 60 * 60);
-            cookie.setPath("/");
-            //回写到浏览器
-            response.addCookie(cookie);
-        } else {
-            boolean checkId = checkId(cookieByName, id);
-            if (!checkId) {
-                String value = cookieByName.getValue();
-                cookieByName.setValue(value+"x"+id);
-                cookieByName.setMaxAge(7 * 24 * 60 * 60);
-                cookieByName.setPath("/");
-                response.addCookie(cookieByName);
-            }
-        }
-        response.sendRedirect("/ServletMirror/jsp/productcookie.jsp");
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String cookieName = "product";
+		response.setContentType("text/html;charset=UTF-8");
+		//1.获取请求参数
+		//2.获取cookie数组
+		//3.如果cookie为null.那就是第一次访问创建cookie
+		//4.判断cookie不是为null,
+		//  如果为空，不用处理
+		//如果不为空，追加上去
+		//5.重定向到商品页面
+		String id = request.getParameter("id");
 
-    /**
-     * 到cookie中查找id
-     *
-     * @param cookieByName
-     * @param id
-     * @return
-     */
-    private boolean checkId(Cookie cookieByName, String id) {
-        String value = cookieByName.getValue();
-        String[] split = value.split("x");
-        for (String str : split) {
-            if (str.equals(id)) {
-                return true;
-            }
-        }
-        return false;
-    }
+		Cookie[] cookies = request.getCookies();
+
+		Cookie cookieByName = MyCookieUtil.getCookieByName(cookies, cookieName);
+		if (cookieByName == null) {
+			Cookie cookie = new Cookie(cookieName, "");
+			cookie.setMaxAge(7 * 24 * 60 * 60);
+			cookie.setPath("/");
+			//回写到浏览器
+			response.addCookie(cookie);
+		} else {
+			boolean checkId = checkId(cookieByName, id);
+			if (!checkId) {
+				String value = cookieByName.getValue();
+				cookieByName.setValue(value + "x" + id);
+				cookieByName.setMaxAge(7 * 24 * 60 * 60);
+				cookieByName.setPath("/");
+				response.addCookie(cookieByName);
+			}
+		}
+		response.sendRedirect("/ServletMirror/jsp/productcookie.jsp");
+	}
+
+	/**
+	 * 到cookie中查找id
+	 *
+	 * @param cookieByName
+	 * @param id
+	 * @return get boolean
+	 */
+	private boolean checkId(Cookie cookieByName, String id) {
+		String value = cookieByName.getValue();
+		String[] split = value.split("x");
+		for (String str : split) {
+			if (str.equals(id)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

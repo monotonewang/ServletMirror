@@ -360,7 +360,23 @@
         <servlet-name>ServletFindByPage</servlet-name>
         <url-pattern>/ServletFindByPage</url-pattern>
     </servlet-mapping>
-
+    <!--文件上传-->
+    <servlet>
+        <servlet-name>ServletUpLoadTheory</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.ServletUpLoadTheory</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpLoadTheory</servlet-name>
+        <url-pattern>/ServletUpLoadTheory</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletUploadByUtil</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.ServletUploadByUtil</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUploadByUtil</servlet-name>
+        <url-pattern>/ServletUploadByUtil</url-pattern>
+    </servlet-mapping>
 
     <!--过滤器-->
     <filter>
