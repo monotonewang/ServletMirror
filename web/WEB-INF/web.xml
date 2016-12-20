@@ -406,6 +406,7 @@
 
 
     <!-- 注册监听ServletContext对象创建与销毁 -->
+    <!--application-->
     <listener>
         <listener-class>com.demo.servletpath.listener.application.ListenerServletContextDemo</listener-class>
     </listener>
