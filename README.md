@@ -1,5 +1,6 @@
-# ServletMirror
+# IntelliJ IDEA
 
-<h2><font color="Green">IntelliJ IDEA</font></h2><br/>
-If get errors after import this project into your idea.<br/>
-Please delete idea Directory | *.iml | web/WEB-INF/classes | out<br/>
+<h2>1. Add locl server</h2><br/>
+You need to click edit configurations
+add local tomcat
+then run it
