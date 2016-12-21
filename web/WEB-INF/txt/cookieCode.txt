@@ -1,0 +1,29 @@
+﻿创建
+cookie cookie = new cookie("","");
+
+获取
+request.getcookies();
+
+遍历
+
+for(int i=0;i<cookies.length;i++){
+
+	if(cookies[i].getName().equals(""){
+		return cookie[i];
+	}
+}
+
+回写
+response.addCookie(cookie);
+
+
+EL获取
+${cookie.name.value};
+
+编码
+
+URLEncoder.encode();
+
+解码
+
+decodeURI();

@@ -1,0 +1,180 @@
+.bm-popup-detail {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat
+}
+.bm-email-rebind-btn {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat
+}
+.bm-tip-anchor {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat
+}
+.bm-video-tip .bm-tip-exclamation {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat
+}
+.bm-popup-content {
+	BACKGROUND: url(../img/bm_bg_f5fcf91c.png) no-repeat
+}
+.bm-popup-ok {
+	BACKGROUND: url(../img/bm_bg_f5fcf91c.png) no-repeat
+}
+.s-mod-bindmsg-edit .bm-mark {
+	DISPLAY: none
+}
+.bm-bind-link {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; OVERFLOW: hidden; CURSOR: pointer
+}
+.bm-hasmsg.bm-mark SPAN {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; OVERFLOW: hidden; CURSOR: pointer
+}
+.bm-hasmsg.bm-mark {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; OVERFLOW: hidden; CURSOR: pointer
+}
+.bm-nomsg.bm-mark {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; OVERFLOW: hidden; CURSOR: pointer
+}
+.bm-email-pwd.bm-mark {
+	BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; OVERFLOW: hidden; CURSOR: pointer
+}
+.bm-hasmsg.bm-mark {
+	LINE-HEIGHT: 13px; MARGIN-TOP: 2px; PADDING-LEFT: 1px; BACKGROUND-POSITION: -149px -253px; HEIGHT: 13px; COLOR: #fff; FONT-SIZE: 11px; FONT-WEIGHT: bold; -webkit-text-size-adjust: none
+}
+.nocursor.bm-hasmsg.bm-mark {
+	CURSOR: default
+}
+.bm-hasmsg.bm-mark SPAN {
+	MIN-WIDTH: 10px; TEXT-ALIGN: center; PADDING-RIGHT: 1px; BACKGROUND-POSITION: right -253px; HEIGHT: 13px; _width: 10px; _overflow-x: visible
+}
+.bm-bind.bm-mark {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+.bm-bind-link {
+	OUTLINE-STYLE: none; WIDTH: 16px; BACKGROUND-POSITION: 0px -270px; FLOAT: left; HEIGHT: 13px
+}
+.bm-nomsg.bm-mark {
+	OUTLINE-STYLE: none; WIDTH: 16px; BACKGROUND-POSITION: 0px -270px; FLOAT: left; HEIGHT: 13px
+}
+.bm-bind-link:hover {
+	TEXT-DECORATION: none
+}
+.bm-msg-tip {
+	_top: -3px; _left: 0
+}
+.bm-email-pwd.bm-mark {
+	MARGIN-TOP: 3px; WIDTH: 14px; BACKGROUND-POSITION: -123px -258px; HEIGHT: 14px
+}
+.bm-hasmsg-one-a.bm-mark {
+	POSITION: relative; TEXT-ALIGN: center; LINE-HEIGHT: 15px; MARGIN-TOP: -8px; DISPLAY: inline-block; BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; HEIGHT: 15px; COLOR: #fff; MARGIN-LEFT: -2px; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.bm-hasmsg-two-a.bm-mark {
+	POSITION: relative; TEXT-ALIGN: center; LINE-HEIGHT: 15px; MARGIN-TOP: -8px; DISPLAY: inline-block; BACKGROUND: url(../img/bindmsg_bg_575a7f17.png) no-repeat; FLOAT: left; HEIGHT: 15px; COLOR: #fff; MARGIN-LEFT: -2px; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.bm-hasmsg-one-a.bm-mark {
+	WIDTH: 15px; BACKGROUND-POSITION: -79px -285px
+}
+.bm-hasmsg-two-a.bm-mark {
+	WIDTH: 27px; BACKGROUND-POSITION: left -285px
+}
+.bm-hasmsg-two-a.bm-mark SPAN {
+	PADDING-RIGHT: 1px
+}
+.bm-hasmsg-one-a.bm-mark SPAN {
+	
+}
+.bm-tip {
+	BORDER-BOTTOM: #e5e5e5 1px solid; POSITION: relative; BORDER-LEFT: #e5e5e5 1px solid; LINE-HEIGHT: 16px; BACKGROUND-COLOR: white; COLOR: #555; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid
+}
+.pop_custom#popDiv A:hover {
+	TEXT-DECORATION: none
+}
+.bm-tip-anchor {
+	POSITION: absolute; WIDTH: 10px; BACKGROUND-POSITION: -20px -270px; HEIGHT: 6px; OVERFLOW: hidden; TOP: -6px; LEFT: 6px; _top: -5px; _left: 2px
+}
+.bm-bind-tip.bm-tip {
+	PADDING-BOTTOM: 7px; LINE-HEIGHT: 14px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; TOP: -4px; PADDING-TOP: 7px; LEFT: -3px; _top: -5px; _left: -8px
+}
+.bm-tip-detail-a {
+	PADDING-BOTTOM: 3px; BACKGROUND-COLOR: white; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; ZOOM: 1; DISPLAY: block; COLOR: #555; PADDING-TOP: 3px
+}
+.bm-msg-tip-count1 .bm-tip-detail-a {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 8px
+}
+.bm-tip-detail-a:hover {
+	BACKGROUND-COLOR: #f4f4f4
+}
+.bm-tip-detail-num {
+	COLOR: #e44604; FONT-WEIGHT: bold
+}
+.bm-bindtype-1 {
+	DISPLAY: none
+}
+.bm-supportmsg-1 {
+	DISPLAY: none
+}
+.bm-video-tip.bm-tip {
+	PADDING-BOTTOM: 7px; LINE-HEIGHT: 18px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 7px; _top: -3px; _left: -2px
+}
+.bm-video-tip .bm-tip-videoguide {
+	TEXT-INDENT: 5px; COLOR: #999; BORDER-TOP: #e5e5e5 1px dotted; PADDING-TOP: 10px
+}
+.bm-video-tip .bm-tip-exclamation {
+	MARGIN-TOP: 2px; WIDTH: 12px; BACKGROUND-POSITION: -123px -258px; FLOAT: left; HEIGHT: 12px
+}
+.bm-tip-videolink {
+	COLOR: #0360af
+}
+.bm-email-tip {
+	PADDING-BOTTOM: 10px; LINE-HEIGHT: 14px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px; _top: -3px
+}
+.bm-email-rebind-btn {
+	BORDER-BOTTOM: #cad4df 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #cad4df 1px solid; LINE-HEIGHT: 22px; MARGIN-TOP: 3px; WIDTH: 70px; DISPLAY: inline-block; BACKGROUND-POSITION: -82px -186px; HEIGHT: 20px; COLOR: #777; MARGIN-LEFT: 25px; BORDER-TOP: #cad4df 1px solid; BORDER-RIGHT: #cad4df 1px solid
+}
+.bm-email-rebind-btn:hover {
+	BACKGROUND-POSITION: -82px -220px; TEXT-DECORATION: none
+}
+.bm-novel-tip.bm-tip {
+	PADDING-BOTTOM: 7px; LINE-HEIGHT: 18px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 7px; _top: -3px; _left: -2px; _line-height: 14px
+}
+.bm-novel-tip.bm-tip .bm-tip-anchor {
+	_top: -4px
+}
+.bm-tip-novel-updating {
+	TEXT-OVERFLOW: ellipsis; DISPLAY: block; MAX-WIDTH: 176px; WHITE-SPACE: nowrap; HEIGHT: 16px; OVERFLOW: hidden; _width: 176px
+}
+.bm-tip-novellink {
+	COLOR: #0360af
+}
+.pop_custom#popDiv .pop_close {
+	DISPLAY: none
+}
+.pop_custom#popDiv .pop_bottom_tr {
+	DISPLAY: none
+}
+.pop_custom#popDiv #dialogBoxTitle {
+	FONT-SIZE: 14px
+}
+.pop_custom#popDiv #popContent {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.pop_custom#popDiv #popBody {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+.bm-popup-content {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 286px; PADDING-RIGHT: 50px; HEIGHT: 107px; PADDING-TOP: 81px
+}
+.bm-popup-web-link {
+	OUTLINE-STYLE: none; OUTLINE-WIDTH: medium; FLOAT: left; HEIGHT: 18px
+}
+.bm-popup-web-link EM {
+	FLOAT: left
+}
+.bm-popup-web-link EM {
+	TEXT-ALIGN: left; LINE-HEIGHT: 18px; PADDING-LEFT: 1px; TEXT-OVERFLOW: ellipsis; DISPLAY: inline-block; MAX-WIDTH: 61px; WHITE-SPACE: nowrap; HEIGHT: 18px; COLOR: #8c807f; FONT-SIZE: 13px; OVERFLOW: hidden; FONT-WEIGHT: bold; _width: 60px; -o-text-overflow: ellipsis
+}
+.bm-popup-foot {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #f8f8f8; PADDING-LEFT: 242px; PADDING-RIGHT: 20px; HEIGHT: 44px; FONT-SIZE: 14px; BORDER-TOP: #e5e5e5 1px solid; PADDING-TOP: 11px
+}
+.bm-popup-ok {
+	LINE-HEIGHT: 32px; OUTLINE-STYLE: none; WIDTH: 96px; DISPLAY: block; BACKGROUND-POSITION: 0px -189px; FLOAT: left; HEIGHT: 32px; COLOR: white; FONT-WEIGHT: bold
+}
+.bm-popup-cancel {
+	TEXT-ALIGN: right; LINE-HEIGHT: 34px; OUTLINE-STYLE: none; WIDTH: 80px; DISPLAY: block; FLOAT: right; HEIGHT: 34px; COLOR: #787878
+}

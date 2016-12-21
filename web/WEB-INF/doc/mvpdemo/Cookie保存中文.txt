@@ -1,0 +1,15 @@
+﻿
+记住用户名:使用Cookie记住用户名!
+	* Cookie对象本身不支持中文!!!
+		* 将中文编码 --- >
+			* URLEncoder.encode(String name,String encoding);
+		* 在页面中解码 --- > 
+			* 1.在JSP页面中使用<%%> 
+				* URLDecoder.decode(String name,String encoding);
+			* 2.自定义EL函数.--- 将解码的代码封装到一个EL函数中.
+			* 3.使用JS解码!---W3C文档.
+				* 全局函数）
+					* decodeURI()
+					* decodeURIComponent()
+
+					

@@ -1,0 +1,26 @@
+﻿Cookie中如果存中文:
+	* 查找Cookie  使用URLDecode解码
+	* 自己写一个EL函数 完成解码
+	* 使用js完成解码.
+
+不想让超链接<a></a>完成跳转的几种方式
+    1.<a href="javascript:void(0);" >javascript:void(0);</a>
+    2.<a href="javascript:;" >javascript:;</a>
+    3.<a href="" onclick="return false;">return false;</a>    
+    4.<a href="#" onclick="return false;">return false;</a>
+    5.<a href="##" >##</a>
+    6.<a href="####" >####</a>    
+    7.<a href="#all" >#all</a>
+    如果想点击超链接调用js方法的话可以设置成
+    1.<a href="javascript:void(0)" onclick="jsFun()">jsFun</a>
+    2.<a href="#" onclick="jsFun();return false;">jsFun();return false;</a>                
+
+
+<form onsubmit="return checkForm();" >  出错  不影响运行 工具问题 
+	关闭JS校验 window - preferences - 搜索Validation 将 JavaScript Validator 前面钩去掉即可
+
+
+
+
+
+

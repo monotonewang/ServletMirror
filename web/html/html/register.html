@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>注册页面</title>
+</head>
+<body>
+<form action="http://localhost:8080/ServletMirror/servletregister">
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>性别</td>
+            <td><input type="radio" name="sex">男
+                <input type="radio" name="sex">女
+            </td>
+        </tr>
+        <tr>
+            <td>选择爱好</td>
+            <td>
+                <input type="checkbox" name="love" value="lq">篮球
+                <input type="checkbox" name="love" value="zq">足球
+                <input type="checkbox" name="love" value="pq">排球
+            </td>
+        </tr>
+        <tr>
+            <td>选择城市</td>
+            <td>
+                <select name="city">
+                    <option value="none">请选择</option>
+                    <option value="sh">上海</option>
+                    <option value="bj">北京</option>
+                    <option value="hz">杭州</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="登录">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

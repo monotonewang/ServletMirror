@@ -1,0 +1,41 @@
+Mysql viesion 5.7.16
+               Create Directory MySQL under C:\Program Files (x86)
+               unzip MySQL into MySQL
+               add file-->my.ini
+**********************************************************************
+               [mysql]
+               # 设置mysql客户端默认字符集
+               default-character-set=utf8
+               [mysqld]
+               #设置3306端口
+               port = 3306
+               # 设置mysql的安装目录
+               basedir=C:\Program Files (x86)\MySQL
+               # 设置mysql数据库的数据的存放目录
+               datadir=C:\Program Files (x86)\MySQL\data
+               # 允许最大连接数
+               max_connections=200
+               # 服务端使用的字符集默认为8比特编码的latin1字符集
+               character-set-server=utf8
+               # 创建新表时将使用的默认存储引擎
+               default-storage-engine=INNODB
+**************************************************************************
+               under [mysqld] add --> skip-grant-tables
+               double click-->cmd(admin)
+               mysqld install
+               mysqld --initialize
+               net start mysql
+               mysql -u root -p
+               (click enter)
+               type-->update MySQL.user set authentication_string=password('root') where user='root' ;
+               type-->exit
+               net stop mysql
+               set path="C:\Program Files (x86)\MySQL\bin"
+               net start mysql
+               mysql -u root -p
+               (enter "root")
+               show databases;
+               if(Navicat(false)==1862){
+                   set PASSWORD=PASSWORD('root')
+               }
+               ok --> success!
