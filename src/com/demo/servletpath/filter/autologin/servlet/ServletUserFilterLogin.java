@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by 7 on 2016/12/22.
@@ -24,7 +26,15 @@ public class ServletUserFilterLogin extends HttpServlet {
 		//1.FilterEncoding set encoding utf-8
 		UserFilter userFilter = new UserFilter();
 		try {
-			BeanUtils.populate(userFilter, request.getParameterMap());
+			Map<String, String[]> parameterMap = request.getParameterMap();
+			System.out.println("ServletUserFilterLogin="+parameterMap);
+			//判断map是否为空
+			if(parameterMap.isEmpty()){
+				request.setAttribute("login.msg", "please login again");
+				request.getRequestDispatcher("/jsp/filter/userLogin.jsp").forward(request, response);
+				return;
+			}
+			BeanUtils.populate(userFilter,parameterMap);
 			//2.call service method
 			UserFilterService service = new UserFilterService();
 			UserFilter user = service.login(userFilter.getUsername(), Md5Utils.md5(userFilter.getPassword()));
@@ -54,6 +64,24 @@ public class ServletUserFilterLogin extends HttpServlet {
 			request.getRequestDispatcher("/jsp/filter/userLogin.jsp").forward(request, response);
 		}
 
+	}
+
+	private boolean printMap(Map<String, String[]> parameterMap) {
+		if(parameterMap==null){
+			return true;
+		}else{
+			Set<Map.Entry<String, String[]>> entries = parameterMap.entrySet();
+			while(entries.iterator().hasNext()){
+				Map.Entry<String, String[]> next = entries.iterator().next();
+				String key = next.getKey();
+				String[] value = next.getValue();
+				for(String v: value){
+					System.out.println("value="+v);
+				}
+				System.out.println("key="+key);
+			}
+		}
+		return false;
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

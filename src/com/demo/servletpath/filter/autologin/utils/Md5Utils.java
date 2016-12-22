@@ -7,6 +7,9 @@ import java.security.NoSuchAlgorithmException;
 public class Md5Utils {
 
 	public static String md5(String plainText) { //明文
+//		if(plainText.isEmpty()){
+//			return "";
+//		}
 		byte[] secretBytes = null;
 		try {
 			secretBytes = MessageDigest.getInstance("md5").digest(

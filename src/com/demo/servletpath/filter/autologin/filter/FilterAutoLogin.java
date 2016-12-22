@@ -32,7 +32,7 @@ public class FilterAutoLogin implements Filter {
 //		System.out.println("contextPath=" + contextPath); /ServletMirror
 //		System.out.println("path=" + path);  /jsp/filter/userLogin.jsp
 
-		if (!path.equals("/jsp/filter/userLogin.jsp") || path.equals("login")) {
+		if (!path.equals("/jsp/filter/userLogin.jsp") || path.equals("/ServletUserFilterLogin")) {
 			// 判断用户没有登录，才进行自动登录.
 			UserFilter user = (UserFilter) request.getSession().getAttribute("user");
 			if (user == null) {
