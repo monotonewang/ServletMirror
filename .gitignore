@@ -18,11 +18,14 @@ hs_err_pid*
 
 .gitignore
 .idea/compiler.xml
+.idea/markdown-navigator.xml
+.idea/markdown-exported-files.xml
 .idea/copyright/
 #.idea/misc.xml
 #.idea/modules.xml
 .idea/workspace.xml
 .idea/inspectionProfiles/profiles_settings.xml
+.idea/markdown-navigator/profiles_settings.xml
 out/
 web/WEB-INF/classes/
 web/WEB-INF/file/
