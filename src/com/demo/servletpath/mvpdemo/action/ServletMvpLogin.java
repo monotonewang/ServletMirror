@@ -73,7 +73,7 @@ public class ServletMvpLogin extends HttpServlet {
                 // 重定向到成功的页面
                 // 显示用户的信息
                 request.getSession().setAttribute("succUser", succUser);
-                response.sendRedirect(request.getContextPath()+"/jsp/mvpdemo/success.jsp");
+                response.sendRedirect(request.getContextPath()+"/jsp/mvpdemo/loginSuccess.jsp");
             }
 
         } catch (Exception e) {

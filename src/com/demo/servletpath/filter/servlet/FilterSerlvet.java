@@ -1,4 +1,4 @@
-package com.demo.servletpath.filter;
+package com.demo.servletpath.filter.servlet;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

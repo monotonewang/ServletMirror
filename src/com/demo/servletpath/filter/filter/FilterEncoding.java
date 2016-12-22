@@ -18,7 +18,7 @@ public class FilterEncoding implements Filter {
 	}
 
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chan) throws ServletException, IOException {
-		System.out.println("FilterEncoding is running");
+//		System.out.println("FilterEncoding is running");
 		HttpServletRequest httpServletRequest= (HttpServletRequest) req;
 		HttpServletResponse httpServletResponse= (HttpServletResponse) resp;
 		httpServletRequest.setCharacterEncoding(encode);

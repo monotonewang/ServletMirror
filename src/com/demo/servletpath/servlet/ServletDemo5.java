@@ -12,17 +12,21 @@ import java.io.IOException;
  */
 @WebServlet(name = "ServletDemo5")
 public class ServletDemo5 extends HttpServlet {
-    @Override
-    public void init() throws ServletException {
-        System.out.println("init");
-    }
+	@Override
+	public void init() throws ServletException {
+		System.out.println("init");
+	}
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("doPost");
-    }
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doPost");
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("doGet");
-        response.getWriter().write("demo5");
-    }
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doGet");
+		//get encoding
+//		String characterEncoding = request.getCharacterEncoding();
+//		System.out.println("encoding="+characterEncoding);
+		response.getWriter().write("demo5");
+	}
 }
