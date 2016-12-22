@@ -37,6 +37,18 @@
         <url-pattern>/index.jsp</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>FilterSerlvet</filter-name>
+        <filter-class>com.demo.servletpath.filter.FilterSerlvet</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterSerlvet</filter-name>
+        <url-pattern>/ServletFilter1</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+
     <!-- 注册监听ServletContext对象创建与销毁 -->
     <!--application-->
     <listener>
@@ -435,6 +447,24 @@
         <servlet-name>ServletUploadFilename</servlet-name>
         <url-pattern>/ServletUploadFilename</url-pattern>
     </servlet-mapping>
+    <!--ServletFilter1-->
+    <servlet>
+        <servlet-name>ServletFilter1</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.ServletFilter1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilter1</servlet-name>
+        <url-pattern>/ServletFilter1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFilter2</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.ServletFilter2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilter2</servlet-name>
+        <url-pattern>/ServletFilter2</url-pattern>
+    </servlet-mapping>
+
     <!--文件下载-->
     <servlet>
         <servlet-name>ServletFileDownLoad</servlet-name>
