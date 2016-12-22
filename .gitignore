@@ -22,5 +22,6 @@ hs_err_pid*
 #.idea/misc.xml
 #.idea/modules.xml
 .idea/workspace.xml
+.idea/inspectionProfiles/profiles_settings.xml
 out/
 web/WEB-INF/classes/
