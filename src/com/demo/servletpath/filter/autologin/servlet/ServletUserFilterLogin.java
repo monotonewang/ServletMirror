@@ -1,8 +1,7 @@
-package com.demo.servletpath.filter.servlet;
+package com.demo.servletpath.filter.autologin.servlet;
 
-import com.demo.servletpath.filter.domain.UserFilter;
-import com.demo.servletpath.filter.service.UserFilterService;
-import com.demo.servletpath.filter.utils.CookieUtils;
+import com.demo.servletpath.filter.autologin.domain.UserFilter;
+import com.demo.servletpath.filter.autologin.service.UserFilterService;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;
@@ -34,17 +33,14 @@ public class ServletUserFilterLogin extends HttpServlet {
 				System.out.println("auto value="+autoLogin);
 				if(autoLogin.equals("on")){
 					//查找里面的之前是否有cookie
-					Cookie cookie = CookieUtils.findCookieByName(request.getCookies(), "autologin");
-//					if(cookie==null){
 					// 使用cookie回写
 						Cookie cookie1=new Cookie("autologin","on");
 						cookie1.setMaxAge(60*60*24*10);//存储10天
 						cookie1.setPath("/");
 						//回写
 						response.addCookie(cookie1);
-//					}
 				}
-				request.getSession().setAttribute("user", user.getUsername());
+				request.getSession().setAttribute("user", user);
 				String contextPath = request.getContextPath();
 				response.sendRedirect(contextPath + "/jsp/filter/loginSuccess.jsp");
 			} else {

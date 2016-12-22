@@ -1,8 +1,8 @@
-package com.demo.servletpath.filter.dao;
+package com.demo.servletpath.filter.autologin.dao;
 
-import com.demo.servletpath.filter.domain.UserFilter;
-import com.demo.servletpath.filter.utils.DataSourceUtils;
-import com.demo.servletpath.filter.utils.Md5Utils;
+import com.demo.servletpath.filter.autologin.domain.UserFilter;
+import com.demo.servletpath.filter.autologin.utils.DataSourceUtils;
+import com.demo.servletpath.filter.autologin.utils.Md5Utils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 

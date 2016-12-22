@@ -12,6 +12,6 @@
 </head>
 <body>
     <%--get user login username--%>
-    user.username=${user}
+    user.username=${user.username}
 </body>
 </html>

@@ -1,7 +1,7 @@
-package com.demo.servletpath.filter.service;
+package com.demo.servletpath.filter.autologin.service;
 
-import com.demo.servletpath.filter.dao.UserFilterDao;
-import com.demo.servletpath.filter.domain.UserFilter;
+import com.demo.servletpath.filter.autologin.dao.UserFilterDao;
+import com.demo.servletpath.filter.autologin.domain.UserFilter;
 
 import java.sql.SQLException;
 

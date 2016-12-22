@@ -78,6 +78,15 @@
         <url-pattern>*.bmp</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>FilterAutoLogin</filter-name>
+        <filter-class>com.demo.servletpath.filter.autologin.filter.FilterAutoLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterAutoLogin</filter-name>
+        <url-pattern>/jsp/filter/userLogin.jsp</url-pattern>
+    </filter-mapping>
+
     <!-- 注册监听ServletContext对象创建与销毁 -->
     <!--application-->
     <listener>
@@ -495,7 +504,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletUserFilterLogin</servlet-name>
-        <servlet-class>com.demo.servletpath.filter.servlet.ServletUserFilterLogin</servlet-class>
+        <servlet-class>com.demo.servletpath.filter.autologin.servlet.ServletUserFilterLogin</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletUserFilterLogin</servlet-name>

@@ -1,4 +1,4 @@
-package com.demo.servletpath.filter.domain;
+package com.demo.servletpath.filter.autologin.domain;
 
 /**
  * Created by 7 on 2016/12/22.

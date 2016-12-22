@@ -1,4 +1,4 @@
-package com.demo.servletpath.filter.utils;
+package com.demo.servletpath.filter.autologin.utils;
 
 import javax.servlet.http.Cookie;
 
