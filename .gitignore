@@ -19,8 +19,8 @@ hs_err_pid*
 .gitignore
 .idea/compiler.xml
 .idea/copyright/
-.idea/misc.xml
-.idea/modules.xml
+#.idea/misc.xml
+#.idea/modules.xml
 .idea/workspace.xml
 out/
 web/WEB-INF/classes/
