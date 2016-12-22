@@ -14,6 +14,11 @@
     <!--<error-code>500</error-code>-->
     <!--</error-page>-->
 
+    <error-page>
+        <exception-type>com.demo.servletpath.filter.autologin.exception.PrivilegeException</exception-type>
+        <location>/jsp/filter/privilegeError.jsp</location>
+    </error-page>
+
     <!--ServletContext-->
     <!--<context-param>-->
     <!--<param-name>encoding</param-name>-->
@@ -78,13 +83,21 @@
         <filter-name>FilterImageCache</filter-name>
         <url-pattern>*.bmp</url-pattern>
     </filter-mapping>
-
+    <!--<filter>-->
+    <!--<filter-name>FilterAutoLogin</filter-name>-->
+    <!--<filter-class>com.demo.servletpath.filter.autologin.filter.FilterAutoLogin</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>FilterAutoLogin</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--权限控制-->
     <filter>
-        <filter-name>FilterAutoLogin</filter-name>
-        <filter-class>com.demo.servletpath.filter.autologin.filter.FilterAutoLogin</filter-class>
+        <filter-name>FilterPrivilege</filter-name>
+        <filter-class>com.demo.servletpath.filter.autologin.filter.FilterPrivilege</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>FilterAutoLogin</filter-name>
+        <filter-name>FilterPrivilege</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
@@ -510,6 +523,38 @@
     <servlet-mapping>
         <servlet-name>ServletUserFilterLogin</servlet-name>
         <url-pattern>/ServletUserFilterLogin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFilterBookAdd</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.autologin.servlet.ServletFilterBookAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilterBookAdd</servlet-name>
+        <url-pattern>/ServletFilterBookAdd</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFilterBookUpdate</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.autologin.servlet.ServletFilterBookUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilterBookUpdate</servlet-name>
+        <url-pattern>/ServletFilterBookUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFilterBookDelete</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.autologin.servlet.ServletFilterBookDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilterBookDelete</servlet-name>
+        <url-pattern>/ServletFilterBookDelete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletFilterBookSearch</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.autologin.servlet.ServletFilterBookSearch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilterBookSearch</servlet-name>
+        <url-pattern>/ServletFilterBookSearch</url-pattern>
     </servlet-mapping>
 
     <!--文件下载-->

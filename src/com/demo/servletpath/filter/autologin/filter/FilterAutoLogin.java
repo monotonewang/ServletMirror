@@ -10,6 +10,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.sql.SQLException;
 
 /**
@@ -41,8 +42,8 @@ public class FilterAutoLogin implements Filter {
 
 				if (cookie != null) {
 					// 找到了,进行自动登录
-					//获取cookie中的value
-					String username = cookie.getValue().split("::")[0];
+					//获取cookie中的value cookie解码
+					String username = URLDecoder.decode(cookie.getValue().split("::")[0],"UTF-8");
 //					String password = URLDecoder.decode(cookie.getValue().split("::")[1], "UTF-8");
 					String password = cookie.getValue().split("::")[1];
 					UserFilterService service = new UserFilterService();

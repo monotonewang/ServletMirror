@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URLEncoder;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.Set;
@@ -45,7 +46,8 @@ public class ServletUserFilterLogin extends HttpServlet {
 					//查找里面的之前是否有cookie
 					// 使用cookie回写
 					Cookie cookie1 = new Cookie("autologin", "on");
-					cookie1.setValue(user.getUsername() + "::"+user.getPassword());
+					//对用户名进行比utf-8编码
+					cookie1.setValue(URLEncoder.encode(user.getUsername(),"UTF-8") + "::"+user.getPassword());
 					cookie1.setMaxAge(60 * 60 * 24 * 10);//存储10天
 					cookie1.setPath("/");
 					//回写

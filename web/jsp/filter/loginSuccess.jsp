@@ -12,6 +12,15 @@
 </head>
 <body>
     <%--get user login username--%>
-    user.username=${user.username}
+    user.username=${user.username}<br>
+    <!--url权限控制-->
+    <a href="${pageContext.request.contextPath}/ServletFilterBookAdd">book add</a>
+    <br>
+    <a href="${pageContext.request.contextPath}/ServletFilterBookUpdate">book update</a>
+    <br>
+    <a href="${pageContext.request.contextPath}/ServletFilterBookDelete">book delete</a>
+    <br>
+    <a href="${pageContext.request.contextPath}/ServletFilterBookSearch">book search</a>
+    <br>
 </body>
 </html>
