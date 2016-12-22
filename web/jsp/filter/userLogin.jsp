@@ -15,7 +15,7 @@ ${ requestScope.get("login.msg") }
     <form action="${pageContext.request.contextPath}/ServletUserFilterLogin" method="post">
         username：<input type="text" name="username"><br>
         password:<input type="password" name="password"><br>
-        <input type="checkbox" name="autoLogin"><br>
+        <input type="checkbox" name="autoLogin">auto login<br>
         <input type="submit" value="login">
     </form>
 </body>
