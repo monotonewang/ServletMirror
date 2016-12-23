@@ -29,11 +29,13 @@ public class ServletFileDownLoad extends HttpServlet {
 		File file = new File("C:/upload/" + filename);
 		System.out.println(file.getAbsolutePath());
 		if (file.exists()) {
+			// /文件存在，完成下载
 
 			// 下载注意事项1--设置下载文件的mimeType
 			String mimeType = this.getServletContext().getMimeType(filename);
 			response.setContentType(mimeType);
 
+			//解决浏览器的文件名称乱码
 			String agent = request.getHeader("user-agent");
 			if (agent.contains("MSIE")) {
 				// IE浏览器
