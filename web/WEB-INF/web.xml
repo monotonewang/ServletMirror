@@ -556,6 +556,14 @@
         <servlet-name>ServletFilterBookSearch</servlet-name>
         <url-pattern>/ServletFilterBookSearch</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletEncodingTest</servlet-name>
+        <servlet-class>com.demo.servletpath.filter.servlet.ServletEncodingTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletEncodingTest</servlet-name>
+        <url-pattern>/ServletEncodingTest</url-pattern>
+    </servlet-mapping>
 
     <!--文件下载-->
     <servlet>

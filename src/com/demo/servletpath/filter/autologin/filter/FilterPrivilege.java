@@ -45,11 +45,13 @@ public class FilterPrivilege implements Filter {
 			if ("admin".equals(user.getRole())) {
 				if (!(admins.contains(path))) {//admin角色
 //                if (path.equals("/ServletFilterBookUpdate") || path.equals("/ServletFilterBookDelete") || path.equals("/ServletFilterBookAdd")) {
+					request.setAttribute("login.msg","admin权限不足");
 					throw new PrivilegeException("admin权限不足");
 //                }
 				}
 			} else {//user角色
 				if (!(users.contains(path))) {
+					request.setAttribute("login.msg","user权限不足");
 					throw new PrivilegeException("user权限不足");
 				}
 			}

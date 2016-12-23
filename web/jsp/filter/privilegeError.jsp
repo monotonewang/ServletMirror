@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>权限不足</h1>
+${pageContext.request.getAttribute("login.msg")}
+<h1>权限不足</h1>
 </body>
 </html>
