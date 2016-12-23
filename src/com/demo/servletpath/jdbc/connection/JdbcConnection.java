@@ -52,7 +52,7 @@ public class JdbcConnection {
 	 * @throws Exception
 	 */
 	@Test
-	public Connection getConnection() throws Exception {
+	public void getConnection() throws Exception {
 		String driverClass = null;
 		String jdbcUrl = null;
 		String user = null;
@@ -74,10 +74,8 @@ public class JdbcConnection {
 //		 driver.connect(jdbcUrl, info);
 		if (con != null) {
 			System.out.print("not null");
-			return con;
 		} else {
 			System.out.print("null");
-			return null;
 		}
 	}
 
@@ -87,7 +85,7 @@ public class JdbcConnection {
 	@Test
 	public void getResByResourBundle() {
 		ResourceBundle resourceBundle = ResourceBundle.getBundle("com/demo/servletpath/jdbc/pro/jdbc");
-		String driver = resourceBundle.getString("driver");
+		String driver = resourceBundle.getString("driverClass");
 		System.out.print(driver);
 	}
 }

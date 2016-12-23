@@ -37,7 +37,7 @@ public class ListenerSession implements
       /* This method is called when an attribute 
          is added to a session.
       */
-        String sname = (String) sbe.getSession().getAttribute(sbe.getName());
+//        String sname = (String) sbe.getSession().getAttribute(sbe.getName());
 //        System.out.println("sname="+sname);
 //        System.out.println("session属性创建了");
 	}

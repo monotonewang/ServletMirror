@@ -28,30 +28,31 @@ public class ServletUserFilterLogin extends HttpServlet {
 		UserFilter userFilter = new UserFilter();
 		try {
 			Map<String, String[]> parameterMap = request.getParameterMap();
-			System.out.println("ServletUserFilterLogin="+parameterMap);
+//			System.out.println("ServletUserFilterLogin="+parameterMap);
 			//判断map是否为空
-			if(parameterMap.isEmpty()){
+			if (parameterMap.isEmpty()) {
 				request.setAttribute("login.msg", "please login again");
 				request.getRequestDispatcher("/jsp/filter/userLogin.jsp").forward(request, response);
 				return;
 			}
-			BeanUtils.populate(userFilter,parameterMap);
+			BeanUtils.populate(userFilter, parameterMap);
 			//2.call service method
 			UserFilterService service = new UserFilterService();
 			UserFilter user = service.login(userFilter.getUsername(), Md5Utils.md5(userFilter.getPassword()));
 			if (user != null) {
 				//login success--> value on
-				String autoLogin = request.getParameter("autoLogin");
-				if (autoLogin.equals("on")) {
-					//查找里面的之前是否有cookie
-					// 使用cookie回写
-					Cookie cookie1 = new Cookie("autologin", "on");
-					//对用户名进行比utf-8编码
-					cookie1.setValue(URLEncoder.encode(user.getUsername(),"UTF-8") + "::"+user.getPassword());
-					cookie1.setMaxAge(60 * 60 * 24 * 10);//存储10天
-					cookie1.setPath("/");
-					//回写
-					response.addCookie(cookie1);
+				if (request.getParameter("autoLogin") != null) {
+					if (request.getParameter("autoLogin").equals("on")) {
+						//查找里面的之前是否有cookie
+						// 使用cookie回写
+						Cookie cookie1 = new Cookie("autologin", "on");
+						//对用户名进行比utf-8编码
+						cookie1.setValue(URLEncoder.encode(user.getUsername(), "UTF-8") + "::" + user.getPassword());
+						cookie1.setMaxAge(60 * 60 * 24 * 10);//存储10天
+						cookie1.setPath("/");
+						//回写
+						response.addCookie(cookie1);
+					}
 				}
 				request.getSession().setAttribute("user", user);
 				String contextPath = request.getContextPath();
@@ -69,18 +70,18 @@ public class ServletUserFilterLogin extends HttpServlet {
 	}
 
 	private boolean printMap(Map<String, String[]> parameterMap) {
-		if(parameterMap==null){
+		if (parameterMap == null) {
 			return true;
-		}else{
+		} else {
 			Set<Map.Entry<String, String[]>> entries = parameterMap.entrySet();
-			while(entries.iterator().hasNext()){
+			while (entries.iterator().hasNext()) {
 				Map.Entry<String, String[]> next = entries.iterator().next();
 				String key = next.getKey();
 				String[] value = next.getValue();
-				for(String v: value){
-					System.out.println("value="+v);
+				for (String v : value) {
+					System.out.println("value=" + v);
 				}
-				System.out.println("key="+key);
+				System.out.println("key=" + key);
 			}
 		}
 		return false;
