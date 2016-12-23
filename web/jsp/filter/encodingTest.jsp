@@ -11,9 +11,9 @@
     <title>encodingTest</title>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/ServletEncodingTest" method="post">
+    <form action="${pageContext.request.contextPath}/ServletEncodingTest" method="get">
         <input type="text" name="username"><br>
-        <input type="password" name="password"><br>
+        <input type="text" name="password"><br>
         <input type="submit" value="commit"><br>
     </form>
 </body>

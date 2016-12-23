@@ -574,6 +574,13 @@
         <servlet-name>ServletFileDownLoad</servlet-name>
         <url-pattern>/ServletFileDownLoad</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>ServletResUpLoad</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.resources.servlet.ServletResUpLoad</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletResUpLoad</servlet-name>
+        <url-pattern>/ServletResUpLoad</url-pattern>
+    </servlet-mapping>
 
 </web-app>
