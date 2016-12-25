@@ -582,5 +582,21 @@
         <servlet-name>ServletResUpLoad</servlet-name>
         <url-pattern>/ServletResUpLoad</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletShowDownload</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.resources.servlet.ServletShowDownload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletShowDownload</servlet-name>
+        <url-pattern>/ServletShowDownload</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletGetDownLoad</servlet-name>
+        <servlet-class>com.demo.servletpath.upload.resources.servlet.ServletGetDownLoad</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletGetDownLoad</servlet-name>
+        <url-pattern>/ServletGetDownLoad</url-pattern>
+    </servlet-mapping>
 
 </web-app>
