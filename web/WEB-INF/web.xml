@@ -598,5 +598,30 @@
         <servlet-name>ServletGetDownLoad</servlet-name>
         <url-pattern>/ServletGetDownLoad</url-pattern>
     </servlet-mapping>
+    <!--Ajax-->
+    <servlet>
+        <servlet-name>ServletAjax</servlet-name>
+        <servlet-class>com.demo.servletpath.ajax.servlet.ServletAjax</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAjax</servlet-name>
+        <url-pattern>/ServletAjax</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletAjaxLogin</servlet-name>
+        <servlet-class>com.demo.servletpath.ajax.servlet.ServletAjaxLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAjaxLogin</servlet-name>
+        <url-pattern>/ServletAjaxLogin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletAjaxProduct</servlet-name>
+        <servlet-class>com.demo.servletpath.ajax.servlet.ServletAjaxProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAjaxProduct</servlet-name>
+        <url-pattern>/ServletAjaxProduct</url-pattern>
+    </servlet-mapping>
 
 </web-app>
