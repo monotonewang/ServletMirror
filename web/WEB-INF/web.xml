@@ -623,5 +623,12 @@
         <servlet-name>ServletAjaxProduct</servlet-name>
         <url-pattern>/ServletAjaxProduct</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>ServletAjaxCity</servlet-name>
+        <servlet-class>com.demo.servletpath.ajax.city.ServletAjaxCity</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAjaxCity</servlet-name>
+        <url-pattern>/ServletAjaxCity</url-pattern>
+    </servlet-mapping>
 </web-app>
