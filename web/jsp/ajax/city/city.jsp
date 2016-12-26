@@ -20,7 +20,7 @@
                     var msg = xmlhttp.responseText;
                     var pro = window.document.getElementById("pro");
 
-                    for (var i = 0; i < msg.length, i++) {
+                    for (var i = 0; i < msg.length; i++) {
                         var option = document.createElement("option");
                         pro.innerHTML = "<option></option>";
                     }
