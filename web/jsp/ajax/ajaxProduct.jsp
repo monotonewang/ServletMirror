@@ -25,8 +25,18 @@
 
                     //5.处理响应数据  当信息全部返回，并且是成功
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        var msg = xmlhttp.responseText
-                        document.getElementById("d").innerHTML = msg;
+
+                        var json = eval(xmlhttp.responseText);
+
+                        var msg="<table border='1'><tr><td>商品编号</td><td>商品名称</td><td>商品价格</td></tr>";
+
+                        for(var i=0;i<json.length;i++){
+                            msg+="<tr><td>"+json[i].id+"</td><td>"+json[i].name+"</td><td>"+json[i].money+"</td></tr>";
+                        }
+                        msg+="</table>";
+
+                        document.getElementById("d").innerHTML=msg;
+
 //                        alert(msg);
                     }
                 };
@@ -38,7 +48,7 @@
                 //4.发送请求 send
                 //	xmlhttp.send(null);
                 //Post请求参数 如果是post方式需要设置请求头
-                xmlhttp.open("get", "http://localhost:8080/ServletMirror/ServletAjaxProduct");
+                xmlhttp.open("GET", "http://localhost:8080/ServletMirror/ServletAjaxProduct");
                 xmlhttp.send(null);
             }
         }
