@@ -1,4 +1,4 @@
-package com.demo.servletpath.ajax.city;
+package com.demo.servletpath.ajax.city.servlet;
 
 import com.demo.servletpath.ajax.city.domain.City;
 import com.demo.servletpath.ajax.city.domain.Province;

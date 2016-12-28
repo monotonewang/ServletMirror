@@ -625,7 +625,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletAjaxCity</servlet-name>
-        <servlet-class>com.demo.servletpath.ajax.city.ServletAjaxCity</servlet-class>
+        <servlet-class>com.demo.servletpath.ajax.city.servlet.ServletAjaxCity</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletAjaxCity</servlet-name>
