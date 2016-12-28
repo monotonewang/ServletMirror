@@ -24,10 +24,10 @@ public class ServletFileDownLoad extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String filename = request.getParameter("filename");
-		System.out.println("filename="+filename);
+//		System.out.println("filename="+filename);
 //		filename = new String(filename.getBytes("ISO8859-1"), "UTF-8");// 解决中文乱码
 		File file = new File("C:/upload/" + filename);
-		System.out.println(file.getAbsolutePath());
+//		System.out.println(file.getAbsolutePath());
 		if (file.exists()) {
 			// /文件存在，完成下载
 

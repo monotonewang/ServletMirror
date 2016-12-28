@@ -11,7 +11,7 @@
     <title>file-->normalDownLoad</title>
 </head>
 <body>
-    <a href='${pageContext.request.contextPath}/file/upload/a.bmp'>a.bmp</a><br>
+    <a href='${pageContext.request.contextPath}/file/upload/a.jpg'>a.bmp</a><br>
     <a href='${pageContext.request.contextPath}/file/upload/a.doc'>a.doc</a><br>
     <a href='${pageContext.request.contextPath}/file/upload/a.txt'>a.txt</a><br>
     <a href='${pageContext.request.contextPath}/file/upload/tk.mp3'>tk.mp3</a><br>
