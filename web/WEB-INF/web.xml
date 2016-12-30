@@ -631,4 +631,21 @@
         <servlet-name>ServletAjaxCity</servlet-name>
         <url-pattern>/ServletAjaxCity</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UserExeclServlet</servlet-name>
+        <servlet-class>com.demo.servletpath.enhance2.servlet.UserExeclServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserExeclServlet</servlet-name>
+        <url-pattern>/UserExeclServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletExcelPrint</servlet-name>
+        <servlet-class>com.demo.servletpath.enhance2.servlet.ServletExcelPrint</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletExcelPrint</servlet-name>
+        <url-pattern>/ServletExcelPrint</url-pattern>
+    </servlet-mapping>
+
 </web-app>
