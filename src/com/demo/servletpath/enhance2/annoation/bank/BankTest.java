@@ -11,5 +11,9 @@ public class BankTest {
 		} catch (NoSuchMethodException e) {
 			e.printStackTrace();
 		}
+
+
+//		bank.account1("a","b",200);
+
 	}
 }

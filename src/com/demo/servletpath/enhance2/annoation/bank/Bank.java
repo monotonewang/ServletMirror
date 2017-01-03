@@ -6,7 +6,19 @@ import java.lang.reflect.Method;
  * Created by 7 on 2017/1/3.
  */
 public class Bank {
-	//name1向name2转账
+
+
+	// name1向name2转账money元---使用配置文件完成
+	public void account1(String name1, String name2, int money) {
+
+		if (money > GlobalFiled.maxMoney) {
+			throw new RuntimeException("最大转账金额为:5000元");
+		}
+
+		System.out.println(name1 + "向" + name2 + "转账:" + money + "元");
+	}
+
+	//name1向name2转账--使用注解完成
 	@BankInfo(maxMoney = 10000)
 	public void account(String name1, String name2, int money) throws NoSuchMethodException {
 		// 1.获取当前方法的Method对象。
