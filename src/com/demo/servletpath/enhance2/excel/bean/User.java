@@ -1,4 +1,4 @@
-package com.demo.servletpath.enhance2.bean;
+package com.demo.servletpath.enhance2.excel.bean;
 
 /**
  * Created by 7 on 2016/12/30.

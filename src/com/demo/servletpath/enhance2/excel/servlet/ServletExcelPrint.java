@@ -1,4 +1,4 @@
-package com.demo.servletpath.enhance2.servlet;
+package com.demo.servletpath.enhance2.excel.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.demo.servletpath.enhance2.utils.ExcelUtils.getUserExcel;
-import static com.demo.servletpath.enhance2.utils.FileDownUtils.delFile;
-import static com.demo.servletpath.enhance2.utils.FileDownUtils.downUserExcel;
+import static com.demo.servletpath.enhance2.excel.utils.ExcelUtils.getUserExcel;
+import static com.demo.servletpath.enhance2.excel.utils.FileDownUtils.delFile;
+import static com.demo.servletpath.enhance2.excel.utils.FileDownUtils.downUserExcel;
 
 /**
  * Created by 7 on 2016/12/30.

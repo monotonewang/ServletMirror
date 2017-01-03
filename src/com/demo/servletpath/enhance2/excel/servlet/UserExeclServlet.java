@@ -1,7 +1,7 @@
-package com.demo.servletpath.enhance2.servlet;
+package com.demo.servletpath.enhance2.excel.servlet;
 
-import com.demo.servletpath.enhance2.bean.User;
-import com.demo.servletpath.enhance2.service.UserService;
+import com.demo.servletpath.enhance2.excel.bean.User;
+import com.demo.servletpath.enhance2.excel.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

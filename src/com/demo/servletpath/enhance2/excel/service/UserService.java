@@ -1,7 +1,7 @@
-package com.demo.servletpath.enhance2.service;
+package com.demo.servletpath.enhance2.excel.service;
 
-import com.demo.servletpath.enhance2.bean.User;
-import com.demo.servletpath.enhance2.dao.UserDao;
+import com.demo.servletpath.enhance2.excel.bean.User;
+import com.demo.servletpath.enhance2.excel.dao.UserDao;
 
 import java.sql.SQLException;
 import java.util.List;

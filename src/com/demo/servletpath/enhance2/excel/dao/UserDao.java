@@ -1,7 +1,7 @@
-package com.demo.servletpath.enhance2.dao;
+package com.demo.servletpath.enhance2.excel.dao;
 
 import com.demo.servletpath.dbutils.customer.utils.DataSourceUtils;
-import com.demo.servletpath.enhance2.bean.User;
+import com.demo.servletpath.enhance2.excel.bean.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 

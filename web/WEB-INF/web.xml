@@ -633,7 +633,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>UserExeclServlet</servlet-name>
-        <servlet-class>com.demo.servletpath.enhance2.servlet.UserExeclServlet</servlet-class>
+        <servlet-class>com.demo.servletpath.enhance2.excel.servlet.UserExeclServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserExeclServlet</servlet-name>
@@ -641,7 +641,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletExcelPrint</servlet-name>
-        <servlet-class>com.demo.servletpath.enhance2.servlet.ServletExcelPrint</servlet-class>
+        <servlet-class>com.demo.servletpath.enhance2.excel.servlet.ServletExcelPrint</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletExcelPrint</servlet-name>

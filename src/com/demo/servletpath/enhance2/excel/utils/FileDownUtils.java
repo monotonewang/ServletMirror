@@ -1,6 +1,6 @@
-package com.demo.servletpath.enhance2.utils;
+package com.demo.servletpath.enhance2.excel.utils;
 
-import com.demo.servletpath.enhance2.servlet.ServletExcelPrint;
+import com.demo.servletpath.enhance2.excel.servlet.ServletExcelPrint;
 import sun.misc.BASE64Encoder;
 
 import javax.servlet.http.HttpServletRequest;

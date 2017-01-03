@@ -1,7 +1,7 @@
-package com.demo.servletpath.enhance2.utils;
+package com.demo.servletpath.enhance2.excel.utils;
 
-import com.demo.servletpath.enhance2.bean.User;
-import com.demo.servletpath.enhance2.service.UserService;
+import com.demo.servletpath.enhance2.excel.bean.User;
+import com.demo.servletpath.enhance2.excel.service.UserService;
 import jxl.Workbook;
 import jxl.write.Label;
 import jxl.write.WritableSheet;
@@ -28,7 +28,7 @@ public class ExcelUtils {
 		//以fileName为文件名来创建一个Workbook
 		wwb = Workbook.createWorkbook(file);
 		// 创建工作表
-		WritableSheet ws = wwb.createSheet("Test Shee 1", 0);
+		WritableSheet ws = wwb.createSheet("Test Sheet 1", 0);
 		//查询数据库中所有的数据
 		UserService service = new UserService();
 		List<User> list = null;
