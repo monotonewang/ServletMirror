@@ -8,7 +8,7 @@ import java.util.List;
  * Created by 7 on 2017/1/3.
  */
 @SuppressWarnings("all") //java本身提供的3种注解方式。
-public class NormalAnnoation implements A {
+public class NormalAnnoation1 implements A {
 
 	@Override
 	public void show() {
