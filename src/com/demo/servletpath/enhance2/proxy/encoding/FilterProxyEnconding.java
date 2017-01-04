@@ -12,6 +12,7 @@ import java.lang.reflect.Proxy;
 /**
  * Created by 7 on 2017/1/4.
  */
+//代理模式 编码
 @WebFilter("/*")
 public class FilterProxyEnconding implements Filter {
 
@@ -33,8 +34,7 @@ public class FilterProxyEnconding implements Filter {
 				if ("getParameter".equals(methodName)) {
 					String param = req.getParameter((String) (args[0]));
 
-					return new String(param.getBytes("iso8859-1"),
-							"utf-8");
+					return new String(param.getBytes("iso8859-1"), "utf-8");
 
 				} else {
 					// 不是getParameter方法，就执行其原来操作.
