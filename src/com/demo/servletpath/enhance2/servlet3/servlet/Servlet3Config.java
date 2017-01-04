@@ -25,5 +25,6 @@ public class Servlet3Config extends HttpServlet {
 		String username = servletConfig.getInitParameter("username");
 		String password = servletConfig.getInitParameter("password");
 		response.getWriter().write("username=" + username + "password=" + password);
+
 	}
 }

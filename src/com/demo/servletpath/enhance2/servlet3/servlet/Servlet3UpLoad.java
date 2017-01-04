@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by 7 on 2017/1/3.
  */
-@WebServlet(name = "Servlet3UpLoad",urlPatterns = {"/Servlet3UpLoad"})
+@WebServlet(name = "Servlet3UpLoad", urlPatterns = {"/Servlet3UpLoad"})
 @MultipartConfig
 public class Servlet3UpLoad extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,19 +24,18 @@ public class Servlet3UpLoad extends HttpServlet {
 
 		Part part = request.getPart("f"); // 得到上传文件信息.
 
-//		req.getParts();
+//		request.getParts();
 
 		// 获取上传文件名称
 		String cd = part.getHeader("Content-Disposition");
 
-		System.out.println(cd); // form-data; name="f";
+//		System.out.println(cd); // form-data; name="f";
 		// filename="C:\Users\Administrator\Desktop\鎹曡幏.PNG"
 
-		String filename = cd.substring(cd.lastIndexOf("\\") + 1,
-				cd.length() - 1);
+		String filename = cd.substring(cd.lastIndexOf("=") + 2, cd.length() - 1);
 
 		System.out.println(filename);
 
-		part.write("C:/upload/"+filename);// 完成文件上传.
+		part.write("C:/upload/" + filename);// complete file upload
 	}
 }
