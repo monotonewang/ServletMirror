@@ -11,11 +11,11 @@
     <title>book</title>
 </head>
 <body>
-当前用户：${user.username}
-<br>
-<a href="${pageContext.request.contextPath}/ServletBooks?method=add">add book</a>
-<a href="${pageContext.request.contextPath}/ServletBooks?method=update">update book</a>
-<a href="${pageContext.request.contextPath}/ServletBooks?method=delete">delete book</a>
-<a href="${pageContext.request.contextPath}/ServletBooks?method=search">search book</a>
+    当前用户：${user.username}
+    <br>
+    <a href="${pageContext.request.contextPath}/ServletBooks?method=add">add book</a>
+    <a href="${pageContext.request.contextPath}/ServletBooks?method=update">update book</a>
+    <a href="${pageContext.request.contextPath}/ServletBooks?method=delete">delete book</a>
+    <a href="${pageContext.request.contextPath}/ServletBooks?method=search">search book</a>
 </body>
 </html>

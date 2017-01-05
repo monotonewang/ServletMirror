@@ -1,7 +1,7 @@
 package com.demo.servletpath.enhance2.permission.dao;
 
+import com.demo.servletpath.dbutils.utils.DataSourceUtils;
 import com.demo.servletpath.enhance2.permission.domain.User;
-import com.demo.servletpath.enhance2.permission.util.DataSourceUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
